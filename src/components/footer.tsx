@@ -1,26 +1,53 @@
 import { Logo } from "@/components/logo"
+import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { faker } from "@faker-js/faker"
 
 const FooterColumn = () => (
-	<div className={cn("flex", "flex-col", "justify-start", "gap-y-2")}>
-		<p className={cn("capitalize", "text-xl")}>{faker.lorem.word()}</p>
-		<div className={cn("flex", "flex-col", "gap-y-2")}>
-			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
+	<div className={cn("flex", "flex-col", "justify-start", "items-start")}>
+		<Button
+			variant={"link"}
+			size={"sm"}
+			className={cn("capitalize", "text-base", "px-0")}
+		>
+			{faker.lorem.word()}
+		</Button>
+		<div className={cn("flex", "flex-col", "items-start")}>
+			<Button
+				variant={"link"}
+				size={"sm"}
+				className={cn("capitalize", "text-sm", "text-muted-foreground", "px-0")}
+			>
 				{faker.lorem.word()}
-			</p>
-			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
+			</Button>
+			<Button
+				variant={"link"}
+				size={"sm"}
+				className={cn("capitalize", "text-sm", "text-muted-foreground", "px-0")}
+			>
 				{faker.lorem.word()}
-			</p>
-			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
+			</Button>
+			<Button
+				variant={"link"}
+				size={"sm"}
+				className={cn("capitalize", "text-sm", "text-muted-foreground", "px-0")}
+			>
 				{faker.lorem.word()}
-			</p>
-			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
+			</Button>
+			<Button
+				variant={"link"}
+				size={"sm"}
+				className={cn("capitalize", "text-sm", "text-muted-foreground", "px-0")}
+			>
 				{faker.lorem.word()}
-			</p>
-			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
+			</Button>
+			<Button
+				variant={"link"}
+				size={"sm"}
+				className={cn("capitalize", "text-sm", "text-muted-foreground", "px-0")}
+			>
 				{faker.lorem.word()}
-			</p>
+			</Button>
 		</div>
 	</div>
 )
@@ -30,10 +57,10 @@ export const Footer = () => (
 		className={cn(
 			"grid",
 			["grid-cols-2", "md:grid-cols-6"],
-			"justify-start",
+			"justify-center",
 			"items-start",
-			["gap-x-8", "gap-y-4"],
-			"w-fit"
+			"w-full",
+			["gap-y-4"]
 		)}
 	>
 		<div className={cn("col-span-2", "md:col-span-1")}>
