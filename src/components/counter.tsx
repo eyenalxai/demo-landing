@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils"
 import {
+	AnimatePresence,
 	type MotionValue,
 	motion,
 	useSpring,
@@ -22,9 +23,19 @@ export const Counter = ({ value }: { value: number }) => {
 
 	return (
 		<div style={{ fontSize }} className={cn("flex", "overflow-hidden")}>
-			{digits.map((place) => (
-				<Digit key={place} place={place} value={value} />
-			))}
+			<AnimatePresence mode="popLayout" initial={false}>
+				{digits.map((place) => (
+					<motion.div
+						key={place}
+						initial={{ opacity: 0, y: -20 }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: 20 }}
+						transition={{ duration: 0.2 }}
+					>
+						<Digit place={place} value={value} />
+					</motion.div>
+				))}
+			</AnimatePresence>
 		</div>
 	)
 }
@@ -42,7 +53,10 @@ const Digit = ({ place, value }: { place: number; value: number }) => {
 	}, [animatedValue, valueRoundedToPlace])
 
 	return (
-		<div style={{ height }} className={cn("relative", "w-[1ch]")}>
+		<div
+			style={{ height }}
+			className={cn("relative", "w-[1ch]", "overflow-hidden")}
+		>
 			{[...Array(10).keys()].map((i) => (
 				<CounterNumber key={i} mv={animatedValue} number={i} />
 			))}
