@@ -1,8 +1,13 @@
 import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import {
+	Popover,
+	PopoverContent,
+	PopoverTrigger
+} from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
-import { Snowflake, Sun } from "lucide-react"
+import { Search, Snowflake, Sun } from "lucide-react"
 
 export const HeaderLink = (props: { text: string }) => (
 	<Button variant={"link"} className={cn("text-muted-foreground", "p-0")}>
@@ -30,7 +35,24 @@ export const Header = () => {
 				))}
 			</div>
 			<div className={cn("flex", "flex-row", "gap-x-4")}>
-				<Input placeholder={"Search..."} className={cn("w-44")} />
+				<Input
+					placeholder={"Search..."}
+					className={cn("w-44", ["hidden", "lg:block"])}
+				/>
+				<Popover>
+					<PopoverTrigger asChild>
+						<Button className={cn(["block", "lg:hidden"])} variant={"outline"}>
+							<Search />
+						</Button>
+					</PopoverTrigger>
+					<PopoverContent className={cn("p-0", "border-0")}>
+						<Input
+							placeholder={"Search..."}
+							className={cn("w-full", ["hidden", "lg:block"])}
+						/>
+					</PopoverContent>
+				</Popover>
+
 				<Button variant={"outline"}>
 					<Sun />
 					Elit
