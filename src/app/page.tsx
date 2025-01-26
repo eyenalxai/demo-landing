@@ -21,11 +21,9 @@ export default function Page() {
 			<div
 				className={cn("w-full", "flex", "flex-col", "items-center", "gap-y-4")}
 			>
-				<p className={cn("text-muted-foreground")}>
-					{capitalize(`${faker.lorem.words(2)}`)}
-				</p>
+				<p className={cn("text-muted-foreground")}>Quisquam volutabrum</p>
 				<h1 className={cn("text-6xl", "font-bold", "max-w-lg", "text-center")}>
-					{capitalize(`${faker.lorem.words(6)}.`)}
+					Ultra creo acsi deleo magni atrocitas.
 				</h1>
 				<h2
 					className={cn(
@@ -35,7 +33,9 @@ export default function Page() {
 						"text-muted-foreground"
 					)}
 				>
-					{capitalize(`${faker.lorem.words(20)}.`)}
+					Corpus concedo trado commodi virgo provident damnatio alias vindico
+					comminor vae territo vero astrum ascit arguo volubilis vinco conduco
+					carus.
 				</h2>
 				<Button>{capitalize(`${faker.lorem.words(2)}`)}</Button>
 			</div>
@@ -47,22 +47,47 @@ export default function Page() {
 					"space-y-4"
 				)}
 			>
-				<div className={cn("w-full", "break-inside-avoid")}>
+				<div
+					className={cn("w-full", "break-inside-avoid", [
+						"animate-in",
+						"slide-in-from-left",
+						"fade-in",
+						"duration-700",
+						"ease-in-out"
+					])}
+				>
 					<Card className={cn("h-40")}>
 						<CardHeader>
 							<CardTitle className={cn("text-3xl")}>
 								Vobis acquiro uterque adipisci soluta
 							</CardTitle>
 							<CardDescription>
-								Vobis acquiro uterque adipisci soluta
+								Commemoro thymbra patria nulla acquiro conspergo tam coma
+								ascisco hic admoneo calculus
 							</CardDescription>
 						</CardHeader>
 					</Card>
 				</div>
-				<div className={cn("w-full", "break-inside-avoid")}>
+				<div
+					className={cn("w-full", "break-inside-avoid", [
+						"animate-in",
+						"slide-in-from-left",
+						"fade-in",
+						"duration-700",
+						"ease-in-out"
+					])}
+				>
 					<CardSlider />
 				</div>
-				<div className={cn("w-full", "break-inside-avoid")}>
+				<div
+					className={cn("w-full", "break-inside-avoid", [
+						"animate-in",
+						"slide-in-from-left",
+						"fade-in",
+						"duration-700",
+						"ease-in-out"
+					])}
+				>
 					<Card className={cn("h-[21rem]")}>
 						<CardHeader>
 							<CardTitle className={cn("text-3xl")}>
@@ -84,7 +109,15 @@ export default function Page() {
 						</CardHeader>
 					</Card>
 				</div>
-				<div className={cn("w-full", "break-inside-avoid")}>
+				<div
+					className={cn("w-full", "break-inside-avoid", [
+						"animate-in",
+						"slide-in-from-left",
+						"fade-in",
+						"duration-700",
+						"ease-in-out"
+					])}
+				>
 					<Card className={cn("h-52")}>
 						<CardHeader>
 							<CardTitle className={cn("text-3xl")}>
@@ -99,11 +132,27 @@ export default function Page() {
 					</Card>
 				</div>
 			</div>
-			<div className={cn("w-full", "flex", "justify-center")}>
+			<div
+				className={cn("w-full", "flex", "justify-center", [
+					"animate-in",
+					"slide-in-from-left",
+					"fade-in",
+					"duration-700",
+					"ease-in-out"
+				])}
+			>
 				<CarouselDemo />
 			</div>
 			<div className={cn("flex", "flex-col", "gap-y-4", "items-center")}>
-				<Card className={cn("max-w-2xl")}>
+				<Card
+					className={cn("max-w-2xl", [
+						"animate-in",
+						"slide-in-from-left",
+						"fade-in",
+						"duration-700",
+						"ease-in-out"
+					])}
+				>
 					<CardHeader>
 						<CardTitle className={cn("text-3xl")}>
 							Vito statua tempore
@@ -115,7 +164,15 @@ export default function Page() {
 						</CardDescription>
 					</CardHeader>
 				</Card>
-				<Card className={cn("max-w-2xl")}>
+				<Card
+					className={cn("max-w-2xl", [
+						"animate-in",
+						"slide-in-from-left",
+						"fade-in",
+						"duration-700",
+						"ease-in-out"
+					])}
+				>
 					<CardHeader>
 						<CardTitle className={cn("text-3xl")}>
 							Maxime depono casso illum
@@ -128,7 +185,15 @@ export default function Page() {
 						</CardDescription>
 					</CardHeader>
 				</Card>
-				<Card className={cn("max-w-2xl")}>
+				<Card
+					className={cn("max-w-2xl", [
+						"animate-in",
+						"slide-in-from-left",
+						"fade-in",
+						"duration-700",
+						"ease-in-out"
+					])}
+				>
 					<CardHeader>
 						<CardTitle className={cn("text-3xl")}>
 							Aro est suadeo benevolentia volo vigilo
@@ -143,7 +208,15 @@ export default function Page() {
 					</CardHeader>
 				</Card>
 			</div>
-			<div className={cn("flex", "flex-row", "gap-x-4")}>
+			<div
+				className={cn("flex", "flex-row", "gap-x-4", [
+					"animate-in",
+					"slide-in-from-left",
+					"fade-in",
+					"duration-700",
+					"ease-in-out"
+				])}
+			>
 				<PieChartDemo />
 				<AreaChartDemo />
 				<LineChartDemo />
