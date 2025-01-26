@@ -39,7 +39,7 @@ export const CardSlider = () => {
 					<Counter
 						from={0}
 						to={combinedValue}
-						duration={0.3}
+						duration={0.1}
 						className={cn("text-3xl", "font-bold")}
 					/>
 
