@@ -37,7 +37,8 @@ export default function Page() {
 					"w-full",
 					"columns-1 md:columns-2",
 					"max-w-screen-lg",
-					"space-y-4"
+					"space-y-4",
+					"mt-12"
 				)}
 			>
 				<div className={cn("w-full", "break-inside-avoid")}>
@@ -92,7 +93,9 @@ export default function Page() {
 					</Card>
 				</div>
 			</div>
-			<CarouselDemo />
+			<div className={cn("w-full", "mt-12", "flex", "justify-center")}>
+				<CarouselDemo />
+			</div>
 		</div>
 	)
 }
