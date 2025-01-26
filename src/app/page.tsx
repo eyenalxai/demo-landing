@@ -2,7 +2,8 @@ import { CardSlider } from "@/components/card-slider"
 import { CarouselDemo } from "@/components/carousel-demo"
 import { Button } from "@/components/ui/button"
 import {
-	Card, CardDescription,
+	Card,
+	CardDescription,
 	CardHeader,
 	CardTitle
 } from "@/components/ui/card"
@@ -61,7 +62,7 @@ export default function Page() {
 								{capitalize(`${faker.lorem.words(5)}`)}
 							</CardTitle>
 							<CardDescription>
-								{capitalize(`${faker.lorem.words(20)}.`)}
+								{capitalize(`${faker.lorem.words(100)}.`)}
 							</CardDescription>
 						</CardHeader>
 					</Card>
