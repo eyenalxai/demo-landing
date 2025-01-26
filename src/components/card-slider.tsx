@@ -38,7 +38,7 @@ export const CardSlider = () => {
 					<p className={cn("text-3xl", "font-bold")}>
 						{combinedValue.toFixed(0)}
 					</p>
-					<div className={cn("flex", "flex-row", "gap-x-4")}>
+					<div className={cn("flex", ["flex-row", "md:flex-col"], "gap-8")}>
 						<Slider
 							defaultValue={[coarseValue]}
 							onValueChange={(value) => setCoarseValue(value[0])}
