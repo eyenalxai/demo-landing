@@ -1,5 +1,8 @@
 import { Logo } from "@/components/logo"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
+import { AtSign, Mail, Send } from "lucide-react"
 import Link from "next/link"
 
 export const FooterLink = (props: { text: string }) => (
@@ -30,7 +33,17 @@ export const Footer = () => {
 
 	return (
 		<footer className={cn("p-4", "border-t", "flex", "flex-col", "gap-y-4")}>
-			<Logo />
+			<div
+				className={cn("flex", "flex-row", "justify-between", "items-center")}
+			>
+				<Logo />
+				<div className={cn("flex", "flex-row", "gap-x-2")}>
+					<AtSign className={cn("text-muted-foreground")} />
+
+					<Mail className={cn("text-muted-foreground")} />
+					<Send className={cn("text-muted-foreground")} />
+				</div>
+			</div>
 			<div
 				className={cn(
 					"flex",
@@ -38,7 +51,7 @@ export const Footer = () => {
 					"flex-wrap",
 					"items-start",
 					"justify-start",
-					"gap-12"
+					["gap-x-12", "gap-y-4"]
 				)}
 			>
 				{Object.entries(footerLinks).map(([title, links]) => (
@@ -60,6 +73,27 @@ export const Footer = () => {
 						))}
 					</div>
 				))}
+			</div>
+			<div className={cn("flex", "flex-col", "gap-y-2")}>
+				<div>
+					<p
+						className={cn("text-muted-foreground", "font-semibold", "text-sm")}
+					>
+						Vitium curto vita
+					</p>
+					<p className={cn("text-muted-foreground", "text-xs")}>
+						Suffragium reprehenderit ventito trucido supellex verbum alioqui.
+					</p>
+				</div>
+				<div className={cn("flex", "flex-row", "items-center", "gap-x-2")}>
+					<Input
+						className={cn("w-64", "text-sm")}
+						placeholder={"thesaurus@confero.adsidue"}
+					/>
+					<Button size={"sm"} variant={"outline"}>
+						Tolero
+					</Button>
+				</div>
 			</div>
 		</footer>
 	)
