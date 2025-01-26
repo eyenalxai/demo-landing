@@ -10,11 +10,7 @@ export default function Page() {
 					"font-bold",
 					"text-center",
 					"max-w-[30rem]",
-					"bg-clip-text",
-					"bg-gradient-to-tr",
-					"from-primary",
-					"to-primary/50",
-					"text-transparent"
+					"text-gradient"
 				)}
 			>
 				Ultra creo acsi deleo magni atrocitas.
@@ -23,29 +19,11 @@ export default function Page() {
 				className={cn("max-w-[30rem]", "text-muted-foreground", "text-center")}
 			>
 				Amor capillus harum capto est{" "}
-				<span
-					className={cn(
-						"font-semibold",
-						"bg-clip-text",
-						"bg-gradient-to-tr",
-						"from-primary",
-						"to-primary/80",
-						"text-transparent"
-					)}
-				>
+				<span className={cn("font-semibold", "text-gradient")}>
 					universe unde strues
 				</span>{" "}
 				tricesimus cuppedia adamo{" "}
-				<span
-					className={cn(
-						"font-semibold",
-						"bg-clip-text",
-						"bg-gradient-to-tr",
-						"from-primary",
-						"to-primary/80",
-						"text-transparent"
-					)}
-				>
+				<span className={cn("font-semibold", "text-gradient")}>
 					capto circumvenio creo
 				</span>{" "}
 				adulatio demergo supplanto nobis pauci, ligula arcu luctus felis.
