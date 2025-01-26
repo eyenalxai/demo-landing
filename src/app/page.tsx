@@ -25,8 +25,20 @@ export default function Page() {
 				{capitalize(`${faker.lorem.words(20)}.`)}
 			</h2>
 			<Button>{capitalize(`${faker.lorem.words(2)}`)}</Button>
-			<div className={cn("w-full", "grid", "grid-cols-12", "max-w-screen-lg")}>
-				<div className={cn(["col-span-12", "md:col-span-7"], "w-full")}>
+			<div
+				className={cn(
+					"w-full",
+					"grid",
+					"grid-cols-12",
+					"grid-flow-dense",
+					"max-w-screen-lg",
+					"gap-4"
+				)}
+			>
+				<div className={cn(["col-span-12", "md:col-span-6"], "w-full")}>
+					<CardSlider />
+				</div>
+				<div className={cn(["col-span-12", "md:col-span-6"], "w-full")}>
 					<CardSlider />
 				</div>
 			</div>
