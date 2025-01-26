@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import "./globals.css"
+import { Footer } from "@/components/footer"
 import { Providers } from "@/components/providers"
 import { cn } from "@/lib/utils"
 import { GeistMono } from "geist/font/mono"
@@ -39,12 +40,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					"font-sans",
 					"antialiased",
 					GeistSans.variable,
-					GeistMono.variable
+					GeistMono.variable,
+					"p-4"
 				)}
 			>
 				<Providers attribute="class" defaultTheme="system" enableSystem>
 					<Header />
-					{children}
+					<main className={cn("my-8")}>{children}</main>
+					<Footer />
 				</Providers>
 			</body>
 		</html>
