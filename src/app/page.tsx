@@ -40,9 +40,6 @@ export default function Page() {
 				)}
 			>
 				<div className={cn("w-fit", "break-inside-avoid")}>
-					<CardSlider />
-				</div>
-				<div className={cn("w-fit", "break-inside-avoid")}>
 					<Card>
 						<CardHeader>
 							<CardTitle className={cn("text-3xl")}>
@@ -53,6 +50,9 @@ export default function Page() {
 							</CardDescription>
 						</CardHeader>
 					</Card>
+				</div>
+				<div className={cn("w-fit", "break-inside-avoid")}>
+					<CardSlider />
 				</div>
 				<div className={cn("w-fit", "break-inside-avoid")}>
 					<Card>
