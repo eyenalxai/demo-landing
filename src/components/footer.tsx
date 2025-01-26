@@ -87,7 +87,7 @@ export const Footer = () => {
 				</div>
 				<div className={cn("flex", "flex-row", "items-center", "gap-x-2")}>
 					<Input
-						className={cn("w-64", "text-sm")}
+						className={cn("w-64", "text-sm", "h-8")}
 						placeholder={"thesaurus@confero.adsidue"}
 					/>
 					<Button size={"sm"} variant={"outline"}>
