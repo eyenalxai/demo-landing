@@ -32,7 +32,16 @@ export const Footer = () => {
 	}
 
 	return (
-		<footer className={cn("p-4", "border-t", "flex", "flex-col", "gap-y-4")}>
+		<footer
+			className={cn(
+				"backdrop-blur-xl",
+				"p-4",
+				"border-t",
+				"flex",
+				"flex-col",
+				"gap-y-4"
+			)}
+		>
 			<div
 				className={cn("flex", "flex-row", "justify-between", "items-center")}
 			>
