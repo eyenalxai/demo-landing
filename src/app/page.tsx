@@ -1,5 +1,11 @@
 import { CardSlider } from "@/components/card-slider"
 import { Button } from "@/components/ui/button"
+import {
+	Card,
+	CardDescription,
+	CardHeader,
+	CardTitle
+} from "@/components/ui/card"
 import { capitalize, cn } from "@/lib/utils"
 import { faker } from "@faker-js/faker"
 
@@ -28,18 +34,49 @@ export default function Page() {
 			<div
 				className={cn(
 					"w-full",
-					"grid",
-					"grid-cols-12",
-					"grid-flow-dense",
+					"columns-1 md:columns-2",
 					"max-w-screen-lg",
-					"gap-4"
+					"space-y-4"
 				)}
 			>
-				<div className={cn(["col-span-12", "md:col-span-6"], "w-full")}>
+				<div className={cn("w-fit", "break-inside-avoid")}>
 					<CardSlider />
 				</div>
-				<div className={cn(["col-span-12", "md:col-span-6"], "w-full")}>
-					<CardSlider />
+				<div className={cn("w-fit", "break-inside-avoid")}>
+					<Card>
+						<CardHeader>
+							<CardTitle className={cn("text-3xl")}>
+								{capitalize(`${faker.lorem.words(5)}`)}
+							</CardTitle>
+							<CardDescription>
+								{capitalize(`${faker.lorem.words(20)}.`)}
+							</CardDescription>
+						</CardHeader>
+					</Card>
+				</div>
+				<div className={cn("w-fit", "break-inside-avoid")}>
+					<Card>
+						<CardHeader>
+							<CardTitle className={cn("text-3xl")}>
+								{capitalize(`${faker.lorem.words(5)}`)}
+							</CardTitle>
+							<CardDescription>
+								{capitalize(`${faker.lorem.words(20)}.`)}
+							</CardDescription>
+						</CardHeader>
+					</Card>
+				</div>
+				<div className={cn("w-fit", "break-inside-avoid")}>
+					<Card>
+						<CardHeader>
+							<CardTitle className={cn("text-3xl")}>
+								{capitalize(`${faker.lorem.words(5)}`)}
+							</CardTitle>
+							<CardDescription>
+								{capitalize(`${faker.lorem.words(20)}.`)}
+							</CardDescription>
+						</CardHeader>
+					</Card>
 				</div>
 			</div>
 		</div>
