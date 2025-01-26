@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils"
+"use client"
+
 import {
-	AnimatePresence,
 	type MotionValue,
 	motion,
 	useSpring,
@@ -12,51 +12,26 @@ const fontSize = 30
 const padding = 15
 const height = fontSize + padding
 
-export function Counter({ value }: { value: number }) {
-	const digits = Math.max(1, Math.floor(Math.log10(Math.abs(value))) + 1)
-	const places = Array.from(
-		{ length: digits },
-		(_, i) => 10 ** (digits - i - 1)
-	)
-
+export const Counter = ({ value }: { value: number }) => {
 	return (
-		<motion.div
-			className={cn("flex", "text-3xl", "overflow-hidden")}
-			layout
-			transition={{ duration: 0.2 }}
-		>
-			<AnimatePresence mode="popLayout" initial={false}>
-				{places.map((place) => (
-					<motion.div
-						key={place}
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -20 }}
-						transition={{ duration: 0.2 }}
-						layout
-					>
-						<Digit place={place} value={value} />
-					</motion.div>
-				))}
-			</AnimatePresence>
-		</motion.div>
+		<div style={{ fontSize }} className="flex overflow-hidden ">
+			<Digit place={100} value={value} />
+			<Digit place={10} value={value} />
+			<Digit place={1} value={value} />
+		</div>
 	)
 }
 
 const Digit = ({ place, value }: { place: number; value: number }) => {
 	const valueRoundedToPlace = Math.floor(value / place)
-	const animatedValue = useSpring(valueRoundedToPlace, {
-		stiffness: 500,
-		mass: 0.1,
-		damping: 25
-	})
+	const animatedValue = useSpring(valueRoundedToPlace)
 
 	useEffect(() => {
 		animatedValue.set(valueRoundedToPlace)
 	}, [animatedValue, valueRoundedToPlace])
 
 	return (
-		<div className={cn("relative", "w-[1ch]", "h-14", "overflow-hidden")}>
+		<div style={{ height }} className="relative w-[1ch] tabular-nums">
 			{[...Array(10).keys()].map((i) => (
 				<CounterNumber key={i} mv={animatedValue} number={i} />
 			))}
