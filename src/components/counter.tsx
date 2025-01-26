@@ -24,14 +24,18 @@ export const Counter = ({ value }: { value: number }) => {
 
 const Digit = ({ place, value }: { place: number; value: number }) => {
 	const valueRoundedToPlace = Math.floor(value / place)
-	const animatedValue = useSpring(valueRoundedToPlace)
+	const animatedValue = useSpring(valueRoundedToPlace, {
+		stiffness: 500,
+		mass: 1.0,
+		damping: 25
+	})
 
 	useEffect(() => {
 		animatedValue.set(valueRoundedToPlace)
 	}, [animatedValue, valueRoundedToPlace])
 
 	return (
-		<div style={{ height }} className="relative w-[1ch] tabular-nums">
+		<div style={{ height }} className="relative w-[1ch]">
 			{[...Array(10).keys()].map((i) => (
 				<CounterNumber key={i} mv={animatedValue} number={i} />
 			))}
