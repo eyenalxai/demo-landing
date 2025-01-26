@@ -56,7 +56,7 @@ export const Header = () => {
 					<HeaderLink key={link} text={link} />
 				))}
 			</div>
-			<div className={cn("flex", "flex-row", "gap-x-2")}>
+			<div className={cn("flex", "flex-row", "gap-x-4")}>
 				<Input
 					placeholder={"Search..."}
 					className={cn("w-44", ["hidden", "lg:block"], "h-8")}
