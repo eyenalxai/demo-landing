@@ -22,7 +22,10 @@ export const Counter = ({ value }: { value: number }) => {
 	)
 
 	return (
-		<div style={{ fontSize }} className={cn("flex", "overflow-hidden")}>
+		<div
+			style={{ fontSize }}
+			className={cn("flex", "overflow-hidden", "tabular-nums")}
+		>
 			<AnimatePresence mode="popLayout" initial={false}>
 				{digits.map((place) => (
 					<motion.div
@@ -62,7 +65,7 @@ const Digit = ({ place, value }: { place: number; value: number }) => {
 	return (
 		<motion.div
 			style={{ height, filter: blurAmount }}
-			className={cn("relative", "w-[1ch]", "overflow-hidden")}
+			className={cn("relative", "w-[0.6em]", "overflow-hidden")}
 		>
 			{[...Array(10).keys()].map((i) => (
 				<CounterNumber key={i} mv={animatedValue} number={i} />
