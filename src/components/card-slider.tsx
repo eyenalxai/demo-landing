@@ -36,13 +36,7 @@ export const CardSlider = () => {
 			</CardHeader>
 			<CardContent>
 				<div className={cn("flex", "flex-col", "gap-y-4")}>
-					<Counter
-						from={0}
-						to={combinedValue}
-						duration={0.1}
-						className={cn("text-3xl", "font-bold")}
-					/>
-
+					<Counter value={combinedValue} />
 					<div className={cn("flex", ["flex-row", "md:flex-col"], "gap-8")}>
 						<Slider
 							defaultValue={[coarseValue]}
