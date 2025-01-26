@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import "./globals.css"
 import { Footer } from "@/components/footer"
+import { GradientBackground } from "@/components/gradient-background"
 import { Providers } from "@/components/providers"
 import { cn } from "@/lib/utils"
 import { GeistMono } from "geist/font/mono"
@@ -40,44 +41,26 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					"font-sans",
 					"antialiased",
 					GeistSans.variable,
-					GeistMono.variable
+					GeistMono.variable,
+					"p-6"
 				)}
 			>
-				<div
-					className={cn("relative", "h-screen", "w-full", "overflow-hidden")}
-				>
-					<div className={cn("absolute", "inset-0")}>
-						<div
+				<Providers attribute="class" defaultTheme="system" enableSystem>
+					<GradientBackground>
+						<Header />
+						<main
 							className={cn(
-								"absolute",
-								"inset-0",
-								"bg-gradient-to-tr",
-								[
-									"from-slate-100",
-									"to-slate-300",
-									"dark:from-slate-950",
-									"dark:to-slate-800"
-								],
-								"p-4"
+								["mt-24", "mb-24"],
+								"flex",
+								"justify-center",
+								"gap-y-4"
 							)}
 						>
-							<Providers attribute="class" defaultTheme="system" enableSystem>
-								<Header />
-								<main
-									className={cn(
-										["mt-24", "mb-24"],
-										"flex",
-										"justify-center",
-										"gap-y-4"
-									)}
-								>
-									{children}
-								</main>
-								<Footer />
-							</Providers>
-						</div>
-					</div>
-				</div>
+							{children}
+						</main>
+						<Footer />
+					</GradientBackground>
+				</Providers>
 			</body>
 		</html>
 	)
