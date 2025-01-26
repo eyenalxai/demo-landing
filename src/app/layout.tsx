@@ -46,7 +46,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			>
 				<Providers attribute="class" defaultTheme="system" enableSystem>
 					<Header />
-					<main className={cn("my-8", "flex", "justify-center", "gap-y-4")}>
+					<main
+						className={cn(
+							["mt-24", "mb-24"],
+							"flex",
+							"justify-center",
+							"gap-y-4"
+						)}
+					>
 						{children}
 					</main>
 					<Footer />

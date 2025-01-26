@@ -56,7 +56,7 @@ export const Footer = () => (
 	<footer
 		className={cn(
 			"grid",
-			["grid-cols-2", "md:grid-cols-6"],
+			["grid-cols-2", "md:grid-cols-5"],
 			"justify-center",
 			"items-start",
 			"w-full",
