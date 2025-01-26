@@ -14,8 +14,8 @@ import { cn } from "@/lib/utils"
 import { useState } from "react"
 
 export const CardSlider = () => {
-	const [coarseValue, setCoarseValue] = useState(50)
-	const [fineValue, setFineValue] = useState(0)
+	const [coarseValue, setCoarseValue] = useState(75)
+	const [fineValue, setFineValue] = useState(-5)
 
 	const combinedValue = Math.max(0, coarseValue * 2 + fineValue * 0.5) * 1000
 
