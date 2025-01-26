@@ -3,7 +3,15 @@ import { cn } from "@/lib/utils"
 
 export default function Page() {
 	return (
-		<div className={cn("flex", "flex-col", "gap-y-12")}>
+		<div
+			className={cn(
+				"flex",
+				"flex-col",
+				"gap-y-12",
+				"justify-center",
+				"items-center"
+			)}
+		>
 			<h1
 				className={cn(
 					"text-6xl",
@@ -43,6 +51,34 @@ export default function Page() {
 				</div>
 				<p className={cn("text-muted-foreground")}>
 					Dolore consequatur adsidue cornu.
+				</p>
+			</div>
+			<div
+				className={cn(
+					"flex",
+					"flex-row",
+					"flex-wrap",
+					"justify-center",
+					"items-end",
+					"gap-4"
+				)}
+			>
+				<h2
+					className={cn(
+						"text-4xl",
+						"font-bold",
+						"text-center",
+						"text-gradient"
+					)}
+				>
+					Id cohibeo vaco?
+				</h2>
+				<p className={cn("text-muted-foreground", "text-center", "text-2xl")}>
+					Quo conicio{" "}
+					<span className={cn("font-semibold", "text-gradient")}>
+						via absconditus
+					</span>{" "}
+					abundans.
 				</p>
 			</div>
 		</div>
