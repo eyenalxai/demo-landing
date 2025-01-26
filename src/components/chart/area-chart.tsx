@@ -1,8 +1,10 @@
 "use client"
 
 import { TrendingUp } from "lucide-react"
+import { useState } from "react"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
+import { Button } from "@/components/ui/button"
 import {
 	Card,
 	CardContent,
@@ -17,40 +19,47 @@ import {
 	ChartTooltip,
 	ChartTooltipContent
 } from "@/components/ui/chart"
-const chartData = [
-	{ month: "January", desktop: 186, mobile: 80 },
-	{ month: "February", desktop: 305, mobile: 200 },
-	{ month: "March", desktop: 237, mobile: 120 },
-	{ month: "April", desktop: 73, mobile: 190 },
-	{ month: "May", desktop: 209, mobile: 130 },
-	{ month: "June", desktop: 214, mobile: 140 }
-]
+
+const generateRandomData = () => {
+	const months = ["Ipsum", "Dolor", "Amet", "Elit", "Maecenas", "Nunc"]
+	return months.map((month) => ({
+		month,
+		desktop: Math.floor(Math.random() * 300) + 50,
+		mobile: Math.floor(Math.random() * 200) + 50
+	}))
+}
 
 const chartConfig = {
 	desktop: {
-		label: "Desktop",
+		label: "Ipsum",
 		color: "hsl(var(--chart-1))"
 	},
 	mobile: {
-		label: "Mobile",
+		label: "Dolor",
 		color: "hsl(var(--chart-2))"
 	}
 } satisfies ChartConfig
 
 export function AreaChartDemo() {
+	const [data, setData] = useState(generateRandomData)
+
 	return (
 		<Card>
 			<CardHeader>
-				<CardTitle>Area Chart - Stacked</CardTitle>
-				<CardDescription>
-					Showing total visitors for the last 6 months
-				</CardDescription>
+				<div className="flex items-center justify-between">
+					<div>
+						<CardTitle>Lorem Ipsum</CardTitle>
+						<CardDescription>
+							Consectetur adipiscing elit vestibulum
+						</CardDescription>
+					</div>
+				</div>
 			</CardHeader>
 			<CardContent>
 				<ChartContainer config={chartConfig}>
 					<AreaChart
 						accessibilityLayer
-						data={chartData}
+						data={data}
 						margin={{
 							left: 12,
 							right: 12
@@ -91,13 +100,16 @@ export function AreaChartDemo() {
 				<div className="flex w-full items-start gap-2 text-sm">
 					<div className="grid gap-2">
 						<div className="flex items-center gap-2 font-medium leading-none">
-							Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+							Sed do eiusmod tempor <TrendingUp className="size-4" />
 						</div>
 						<div className="flex items-center gap-2 leading-none text-muted-foreground">
-							January - June 2024
+							Ut labore et dolore magna
 						</div>
 					</div>
 				</div>
+				<Button variant="outline" onClick={() => setData(generateRandomData())}>
+					Regenerate
+				</Button>
 			</CardFooter>
 		</Card>
 	)
