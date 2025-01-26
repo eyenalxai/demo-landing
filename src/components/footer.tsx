@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils"
 import { faker } from "@faker-js/faker"
 
 const FooterColumn = () => (
-	<div className={cn("flex", "flex-col", "justify-start", "gap-y-4")}>
-		<p className={cn("capitalize")}>{faker.lorem.word()}</p>
+	<div className={cn("flex", "flex-col", "justify-start", "gap-y-2")}>
+		<p className={cn("capitalize", "text-xl")}>{faker.lorem.word()}</p>
 		<div className={cn("flex", "flex-col", "gap-y-2")}>
 			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
 				{faker.lorem.word()}
