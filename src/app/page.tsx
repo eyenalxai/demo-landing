@@ -1,6 +1,6 @@
-import { AreaChartDemo } from "@/components/chart/area-chart"
 import { CardSlider } from "@/components/card-slider"
 import { CarouselDemo } from "@/components/carousel-demo"
+import { AreaChartDemo } from "@/components/chart/area-chart"
 import { LineChartDemo } from "@/components/chart/line-chart"
 import { PieChartDemo } from "@/components/chart/pie-chart"
 import { Button } from "@/components/ui/button"
@@ -16,32 +16,35 @@ import { faker } from "@faker-js/faker"
 export default function Page() {
 	return (
 		<div
-			className={cn("w-full", "flex", "flex-col", "items-center", "gap-y-4")}
+			className={cn("w-full", "flex", "flex-col", "items-center", "gap-y-12")}
 		>
-			<p className={cn("text-muted-foreground")}>
-				{capitalize(`${faker.lorem.words(2)}`)}
-			</p>
-			<h1 className={cn("text-6xl", "font-bold", "max-w-lg", "text-center")}>
-				{capitalize(`${faker.lorem.words(6)}.`)}
-			</h1>
-			<h2
-				className={cn(
-					"text-xl",
-					"max-w-lg",
-					"text-center",
-					"text-muted-foreground"
-				)}
+			<div
+				className={cn("w-full", "flex", "flex-col", "items-center", "gap-y-4")}
 			>
-				{capitalize(`${faker.lorem.words(20)}.`)}
-			</h2>
-			<Button>{capitalize(`${faker.lorem.words(2)}`)}</Button>
+				<p className={cn("text-muted-foreground")}>
+					{capitalize(`${faker.lorem.words(2)}`)}
+				</p>
+				<h1 className={cn("text-6xl", "font-bold", "max-w-lg", "text-center")}>
+					{capitalize(`${faker.lorem.words(6)}.`)}
+				</h1>
+				<h2
+					className={cn(
+						"text-xl",
+						"max-w-lg",
+						"text-center",
+						"text-muted-foreground"
+					)}
+				>
+					{capitalize(`${faker.lorem.words(20)}.`)}
+				</h2>
+				<Button>{capitalize(`${faker.lorem.words(2)}`)}</Button>
+			</div>
 			<div
 				className={cn(
 					"w-full",
 					"columns-1 md:columns-2",
 					"max-w-screen-lg",
-					"space-y-4",
-					"mt-12"
+					"space-y-4"
 				)}
 			>
 				<div className={cn("w-full", "break-inside-avoid")}>
@@ -96,12 +99,10 @@ export default function Page() {
 					</Card>
 				</div>
 			</div>
-			<div className={cn("w-full", "mt-12", "flex", "justify-center")}>
+			<div className={cn("w-full", "flex", "justify-center")}>
 				<CarouselDemo />
 			</div>
-			<div
-				className={cn("flex", "flex-col", "gap-y-4", "mt-12", "items-center")}
-			>
+			<div className={cn("flex", "flex-col", "gap-y-4", "items-center")}>
 				<Card className={cn("max-w-2xl")}>
 					<CardHeader>
 						<CardTitle className={cn("text-3xl")}>
@@ -142,10 +143,19 @@ export default function Page() {
 					</CardHeader>
 				</Card>
 			</div>
-			<div className={cn("flex", "flex-row", "gap-x-4", "mt-12")}>
+			<div className={cn("flex", "flex-row", "gap-x-4")}>
 				<PieChartDemo />
 				<AreaChartDemo />
 				<LineChartDemo />
+			</div>
+			<div
+				className={cn("w-full", "flex", "flex-col", "items-center", "gap-y-4")}
+			>
+				<h1 className={cn("text-6xl", "font-bold", "max-w-2xl", "text-center")}>
+					Thalassinus tandem communis tersus aperiam tego.
+				</h1>
+
+				<Button>{capitalize(`${faker.lorem.words(2)}`)}</Button>
 			</div>
 		</div>
 	)
