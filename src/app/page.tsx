@@ -1,8 +1,8 @@
 import { CardSlider } from "@/components/card-slider"
+import { CarouselDemo } from "@/components/carousel-demo"
 import { Button } from "@/components/ui/button"
 import {
-	Card,
-	CardDescription,
+	Card, CardDescription,
 	CardHeader,
 	CardTitle
 } from "@/components/ui/card"
@@ -79,6 +79,7 @@ export default function Page() {
 					</Card>
 				</div>
 			</div>
+			<CarouselDemo />
 		</div>
 	)
 }
