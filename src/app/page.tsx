@@ -37,7 +37,14 @@ export default function Page() {
 					comminor vae territo vero astrum ascit arguo volubilis vinco conduco
 					carus.
 				</h2>
-				<Button>{capitalize(`${faker.lorem.words(2)}`)}</Button>
+				<Button
+					className={cn(
+						"animate-bounce",
+						"shadow-[0px_0px_131px_11px_rgba(200,0,255,1)]"
+					)}
+				>
+					{capitalize(`${faker.lorem.words(2)}`)}
+				</Button>
 			</div>
 			<div
 				className={cn(
@@ -239,10 +246,11 @@ export default function Page() {
 				<Button
 					className={cn(
 						"mt-12",
-						"p-8",
-						"text-3xl",
-						"font-bold",
-						"animate-bounce"
+						"p-6",
+						"text-xl",
+						"font-semibold",
+						"animate-bounce",
+						"shadow-[0px_0px_131px_11px_rgba(200,0,255,1)]"
 					)}
 				>
 					{capitalize(`${faker.lorem.words(2)}`)}
