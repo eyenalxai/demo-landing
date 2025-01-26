@@ -132,6 +132,9 @@ export default function Page() {
 					</Card>
 				</div>
 			</div>
+			<h1 className={cn("text-6xl", "font-bold", "max-w-lg", "text-center")}>
+				{capitalize(`${faker.lorem.words(4)}`)}
+			</h1>
 			<div
 				className={cn("w-full", "flex", "justify-center", "px-10", [
 					"animate-in",
@@ -143,6 +146,9 @@ export default function Page() {
 			>
 				<CarouselDemo />
 			</div>
+			<h1 className={cn("text-6xl", "font-bold", "max-w-lg", "text-center")}>
+				{capitalize(`${faker.lorem.words(4)}`)}
+			</h1>
 			<div className={cn("flex", "flex-col", "gap-y-4", "items-center")}>
 				<Card
 					className={cn("max-w-2xl", [
@@ -208,6 +214,9 @@ export default function Page() {
 					</CardHeader>
 				</Card>
 			</div>
+			<h1 className={cn("text-6xl", "font-bold", "max-w-lg", "text-center")}>
+				{capitalize(`${faker.lorem.words(4)}`)}
+			</h1>
 			<div
 				className={cn("flex", ["flex-col", "md:flex-row"], "gap-4", [
 					"animate-in",
