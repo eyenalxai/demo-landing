@@ -51,20 +51,13 @@ const Digit = ({ place, value }: { place: number; value: number }) => {
 		damping: 25
 	})
 
-	const blurAmount = useTransform(animatedValue, (latest) => {
-		const diff = Math.abs(latest - valueRoundedToPlace)
-		// Exponential falloff for smoother blur transition
-		const blurPixels = Math.min(3, diff * 8)
-		return `blur(${blurPixels}px)`
-	})
-
 	useEffect(() => {
 		animatedValue.set(valueRoundedToPlace)
 	}, [animatedValue, valueRoundedToPlace])
 
 	return (
 		<motion.div
-			style={{ height, filter: blurAmount }}
+			style={{ height }}
 			className={cn("relative", "w-[0.6em]", "overflow-hidden")}
 		>
 			{[...Array(10).keys()].map((i) => (
