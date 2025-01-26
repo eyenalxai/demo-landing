@@ -56,7 +56,7 @@ export default function Page() {
 						"ease-in-out"
 					])}
 				>
-					<Card className={cn("h-40")}>
+					<Card className={cn("md:h-40")}>
 						<CardHeader>
 							<CardTitle className={cn("text-3xl")}>
 								Vobis acquiro uterque adipisci soluta
@@ -88,7 +88,7 @@ export default function Page() {
 						"ease-in-out"
 					])}
 				>
-					<Card className={cn("h-[21rem]")}>
+					<Card className={cn("md:h-[21rem]")}>
 						<CardHeader>
 							<CardTitle className={cn("text-3xl")}>
 								Decet varius non argumentum abeo
@@ -118,7 +118,7 @@ export default function Page() {
 						"ease-in-out"
 					])}
 				>
-					<Card className={cn("h-52")}>
+					<Card className={cn("md:h-52")}>
 						<CardHeader>
 							<CardTitle className={cn("text-3xl")}>
 								Suggero artificiose cattus ter vigor

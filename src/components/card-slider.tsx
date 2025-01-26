@@ -20,7 +20,7 @@ export const CardSlider = () => {
 	const combinedValue = Math.max(0, coarseValue * 2 + fineValue * 0.5) * 1000
 
 	return (
-		<Card className={cn("col-span-6", "w-full", "h-96")}>
+		<Card className={cn("col-span-6", "w-full", "md:h-96")}>
 			<CardHeader>
 				<CardTitle className={cn("text-3xl")}>
 					Vesper terra tabernus sunt
