@@ -31,7 +31,10 @@ export const Header = () => {
 	return (
 		<header
 			className={cn(
-				"backdrop-blur-xl",
+				"w-full",
+				"fixed",
+				"top-0",
+				"backdrop-blur",
 				"flex",
 				"flex-row",
 				"justify-between",
