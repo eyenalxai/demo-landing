@@ -40,24 +40,44 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					"font-sans",
 					"antialiased",
 					GeistSans.variable,
-					GeistMono.variable,
-					"p-4"
+					GeistMono.variable
 				)}
 			>
-				<Providers attribute="class" defaultTheme="system" enableSystem>
-					<Header />
-					<main
-						className={cn(
-							["mt-24", "mb-24"],
-							"flex",
-							"justify-center",
-							"gap-y-4"
-						)}
-					>
-						{children}
-					</main>
-					<Footer />
-				</Providers>
+				<div
+					className={cn("relative", "h-screen", "w-full", "overflow-hidden")}
+				>
+					<div className={cn("absolute", "inset-0")}>
+						<div
+							className={cn(
+								"absolute",
+								"inset-0",
+								"bg-gradient-to-tr",
+								[
+									"from-slate-100",
+									"to-slate-300",
+									"dark:from-slate-950",
+									"dark:to-slate-800"
+								],
+								"p-4"
+							)}
+						>
+							<Providers attribute="class" defaultTheme="system" enableSystem>
+								<Header />
+								<main
+									className={cn(
+										["mt-24", "mb-24"],
+										"flex",
+										"justify-center",
+										"gap-y-4"
+									)}
+								>
+									{children}
+								</main>
+								<Footer />
+							</Providers>
+						</div>
+					</div>
+				</div>
 			</body>
 		</html>
 	)
