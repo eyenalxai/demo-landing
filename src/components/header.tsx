@@ -6,7 +6,7 @@ import { faker } from "@faker-js/faker"
 export const Header = () => (
 	<header className={cn("flex", "justify-between", "items-center")}>
 		<Logo />
-		<div className={cn("flex", "gap-2")}>
+		<div className={cn(["hidden", "md:flex"], "gap-2")}>
 			<Button
 				variant={"link"}
 				className={cn("capitalize", "text-sm", "text-muted-foreground")}
