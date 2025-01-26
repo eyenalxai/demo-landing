@@ -1,8 +1,10 @@
 "use client"
 
 import { TrendingUp } from "lucide-react"
+import { useState } from "react"
 import { CartesianGrid, LabelList, Line, LineChart } from "recharts"
 
+import { Button } from "@/components/ui/button"
 import {
 	Card,
 	CardContent,
@@ -17,53 +19,63 @@ import {
 	ChartTooltip,
 	ChartTooltipContent
 } from "@/components/ui/chart"
-const chartData = [
-	{ browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-	{ browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-	{ browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-	{ browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-	{ browser: "other", visitors: 90, fill: "var(--color-other)" }
-]
+
+const generateRandomData = () => {
+	const browsers = [
+		{ name: "Lorem", color: "var(--color-chrome)" },
+		{ name: "Ipsum", color: "var(--color-safari)" },
+		{ name: "Dolor", color: "var(--color-firefox)" },
+		{ name: "Amet", color: "var(--color-edge)" },
+		{ name: "Elit", color: "var(--color-other)" }
+	]
+	return browsers.map(({ name, color }) => ({
+		browser: name,
+		visitors: Math.floor(Math.random() * 300) + 100,
+		fill: color
+	}))
+}
 
 const chartConfig = {
 	visitors: {
-		label: "Visitors",
+		label: "Maecenas",
 		color: "hsl(var(--chart-2))"
 	},
-	chrome: {
-		label: "Chrome",
+	Lorem: {
+		label: "Lorem",
 		color: "hsl(var(--chart-1))"
 	},
-	safari: {
-		label: "Safari",
+	Ipsum: {
+		label: "Ipsum",
 		color: "hsl(var(--chart-2))"
 	},
-	firefox: {
-		label: "Firefox",
+	Dolor: {
+		label: "Dolor",
 		color: "hsl(var(--chart-3))"
 	},
-	edge: {
-		label: "Edge",
+	Amet: {
+		label: "Amet",
 		color: "hsl(var(--chart-4))"
 	},
-	other: {
-		label: "Other",
+	Elit: {
+		label: "Elit",
 		color: "hsl(var(--chart-5))"
 	}
 } satisfies ChartConfig
 
 export function LineChartDemo() {
+	const [data, setData] = useState(generateRandomData)
+
 	return (
 		<Card>
 			<CardHeader>
-				<CardTitle>Line Chart - Custom Label</CardTitle>
-				<CardDescription>January - June 2024</CardDescription>
+				<CardTitle>Vestibulum Consectetur</CardTitle>
+				<CardDescription>Sed ut perspiciatis unde omnis</CardDescription>
 			</CardHeader>
 			<CardContent>
 				<ChartContainer config={chartConfig}>
 					<LineChart
 						accessibilityLayer
-						data={chartData}
+						data={data}
 						margin={{
 							top: 24,
 							left: 24,
@@ -107,13 +119,18 @@ export function LineChartDemo() {
 					</LineChart>
 				</ChartContainer>
 			</CardContent>
-			<CardFooter className="flex-col items-start gap-2 text-sm">
-				<div className="flex gap-2 font-medium leading-none">
-					Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+			<CardFooter className="flex items-center justify-between gap-2 text-sm">
+				<div className="grid gap-2">
+					<div className="flex gap-2 font-medium leading-none">
+						Nunc sed augue lacus <TrendingUp className="size-4" />
+					</div>
+					<div className="leading-none text-muted-foreground">
+						Viverra maecenas accumsan lacus
+					</div>
 				</div>
-				<div className="leading-none text-muted-foreground">
-					Showing total visitors for the last 6 months
-				</div>
+				<Button variant="outline" onClick={() => setData(generateRandomData())}>
+					Regenerate
+				</Button>
 			</CardFooter>
 		</Card>
 	)
