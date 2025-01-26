@@ -10,6 +10,6 @@ export const Logo = () => (
 			"gap-x-1"
 		)}
 	>
-		<p className={cn("font-semibold", "text-2xl")}>Iaculis Dui</p>
+		<p className={cn("font-semibold", "text-xl")}>Iaculis</p>
 	</div>
 )
