@@ -59,8 +59,8 @@ export const Footer = () => (
 			["grid-cols-2", "md:grid-cols-5"],
 			"justify-center",
 			"items-start",
-			"w-full",
-			["gap-y-4"]
+			"w-fit",
+			["gap-x-12", "gap-y-4"]
 		)}
 	>
 		<div className={cn("col-span-2", "md:col-span-1")}>
