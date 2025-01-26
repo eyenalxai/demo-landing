@@ -1,10 +1,13 @@
+import { CardSlider } from "@/components/card-slider"
 import { Button } from "@/components/ui/button"
 import { capitalize, cn } from "@/lib/utils"
 import { faker } from "@faker-js/faker"
 
 export default function Page() {
 	return (
-		<div className={cn("flex", "flex-col", "items-center", "gap-y-4")}>
+		<div
+			className={cn("w-full", "flex", "flex-col", "items-center", "gap-y-4")}
+		>
 			<p className={cn("text-muted-foreground")}>
 				{capitalize(`${faker.lorem.words(2)}`)}
 			</p>
@@ -22,6 +25,11 @@ export default function Page() {
 				{capitalize(`${faker.lorem.words(20)}.`)}
 			</h2>
 			<Button>{capitalize(`${faker.lorem.words(2)}`)}</Button>
+			<div className={cn("w-full", "grid", "grid-cols-12")}>
+				<div className={cn("col-span-12", "w-full")}>
+					<CardSlider />
+				</div>
+			</div>
 		</div>
 	)
 }
