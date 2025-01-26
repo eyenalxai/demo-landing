@@ -30,7 +30,14 @@ export const Header = () => {
 
 	return (
 		<header
-			className={cn("flex", "flex-row", "justify-between", "p-4", "border-b")}
+			className={cn(
+				"flex",
+				"flex-row",
+				"justify-between",
+				"items-center",
+				"p-4",
+				"border-b"
+			)}
 		>
 			<Logo />
 			<div
@@ -45,30 +52,30 @@ export const Header = () => {
 					<HeaderLink key={link} text={link} />
 				))}
 			</div>
-			<div className={cn("flex", "flex-row", "gap-x-4")}>
+			<div className={cn("flex", "flex-row", "gap-x-2")}>
 				<Input
 					placeholder={"Search..."}
-					className={cn("w-44", ["hidden", "lg:block"])}
+					className={cn("w-44", ["hidden", "lg:block"], "h-8")}
 				/>
 				<Popover>
 					<PopoverTrigger asChild>
-						<Button className={cn(["block", "lg:hidden"])} variant={"outline"}>
+						<Button
+							size={"sm"}
+							className={cn(["block", "lg:hidden"])}
+							variant={"outline"}
+						>
 							<Search />
 						</Button>
 					</PopoverTrigger>
 					<PopoverContent className={cn("p-0", "border-0")}>
-						<Input
-							placeholder={"Search..."}
-							className={cn("w-full", ["hidden", "lg:block"])}
-						/>
+						<Input placeholder={"Search..."} className={cn("w-full")} />
 					</PopoverContent>
 				</Popover>
-
-				<Button variant={"outline"}>
+				<Button size={"sm"} variant={"outline"}>
 					<Sun />
 					Elit
 				</Button>
-				<Button>
+				<Button size={"sm"}>
 					<Snowflake />
 					Sapien
 				</Button>
