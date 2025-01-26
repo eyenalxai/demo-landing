@@ -12,14 +12,17 @@ const padding = 15
 const height = fontSize + padding
 
 export function Counter({ value }: { value: number }) {
+	const digits = Math.max(1, Math.floor(Math.log10(Math.abs(value))) + 1)
+	const places = Array.from(
+		{ length: digits },
+		(_, i) => 10 ** (digits - i - 1)
+	)
+
 	return (
 		<div className={cn("flex", "text-3xl", "overflow-hidden")}>
-			<Digit place={100000} value={value} />
-			<Digit place={10000} value={value} />
-			<Digit place={1000} value={value} />
-			<Digit place={100} value={value} />
-			<Digit place={10} value={value} />
-			<Digit place={1} value={value} />
+			{places.map((place) => (
+				<Digit key={place} place={place} value={value} />
+			))}
 		</div>
 	)
 }
