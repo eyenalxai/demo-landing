@@ -40,41 +40,53 @@ export default function Page() {
 					"space-y-4"
 				)}
 			>
-				<div className={cn("w-fit", "break-inside-avoid")}>
-					<Card>
+				<div className={cn("w-full", "break-inside-avoid")}>
+					<Card className={cn("h-40")}>
 						<CardHeader>
 							<CardTitle className={cn("text-3xl")}>
-								{capitalize(`${faker.lorem.words(5)}`)}
+								Vobis acquiro uterque adipisci soluta
 							</CardTitle>
 							<CardDescription>
-								{capitalize(`${faker.lorem.words(20)}.`)}
+								Vobis acquiro uterque adipisci soluta
 							</CardDescription>
 						</CardHeader>
 					</Card>
 				</div>
-				<div className={cn("w-fit", "break-inside-avoid")}>
+				<div className={cn("w-full", "break-inside-avoid")}>
 					<CardSlider />
 				</div>
-				<div className={cn("w-fit", "break-inside-avoid")}>
-					<Card>
+				<div className={cn("w-full", "break-inside-avoid")}>
+					<Card className={cn("h-[21rem]")}>
 						<CardHeader>
 							<CardTitle className={cn("text-3xl")}>
-								{capitalize(`${faker.lorem.words(5)}`)}
+								Decet varius non argumentum abeo
 							</CardTitle>
 							<CardDescription>
-								{capitalize(`${faker.lorem.words(100)}.`)}
+								Alo vita sodalitas ustulo crebro comedo conservo consuasor
+								universe congregatio coruscus debeo accedo succedo attero qui
+								tantillus repudiandae autus certe cinis abduco conscendo debeo
+								adhaero vigilo carcer charisma charisma solutio temptatio
+								coniecto aliqua quasi aggero commemoro thymbra patria nulla
+								acquiro conspergo tam coma ascisco hic admoneo calculus
+								repellendus unde copia caveo repellendus vehemens cogo una
+								allatus cavus terra tabernus vorago verto aspicio voluptate
+								cattus deleo vester nobis vae atrox vorago copia desparatus
+								calculus amo alienus viduo speculum theatrum ubi cito
+								thalassinus triduana capto carbo vero tero.
 							</CardDescription>
 						</CardHeader>
 					</Card>
 				</div>
-				<div className={cn("w-fit", "break-inside-avoid")}>
-					<Card>
+				<div className={cn("w-full", "break-inside-avoid")}>
+					<Card className={cn("h-52")}>
 						<CardHeader>
 							<CardTitle className={cn("text-3xl")}>
-								{capitalize(`${faker.lorem.words(5)}`)}
+								Suggero artificiose cattus ter vigor
 							</CardTitle>
 							<CardDescription>
-								{capitalize(`${faker.lorem.words(20)}.`)}
+								Tantillus aveho earum ex somniculosus temperantia taceo peccatus
+								defessus aeternus appositus via fuga appono alo cito corrigo
+								claudeo confugo pauci.
 							</CardDescription>
 						</CardHeader>
 					</Card>
