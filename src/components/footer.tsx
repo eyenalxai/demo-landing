@@ -47,10 +47,9 @@ export const Footer = () => {
 			>
 				<Logo />
 				<div className={cn("flex", "flex-row", "gap-x-2")}>
-					<AtSign className={cn("text-muted-foreground")} />
-
-					<Mail className={cn("text-muted-foreground")} />
-					<Send className={cn("text-muted-foreground")} />
+					<AtSign className={cn("text-muted-foreground", "size-4")} />
+					<Mail className={cn("text-muted-foreground", "size-4")} />
+					<Send className={cn("text-muted-foreground", "size-4")} />
 				</div>
 			</div>
 			<div
