@@ -1,3 +1,4 @@
+import { Header } from "@/components/header"
 import "./globals.css"
 import { Providers } from "@/components/providers"
 import { cn } from "@/lib/utils"
@@ -33,8 +34,16 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={cn("font-sans", "antialiased", GeistSans.variable, GeistMono.variable)}>
+			<body
+				className={cn(
+					"font-sans",
+					"antialiased",
+					GeistSans.variable,
+					GeistMono.variable
+				)}
+			>
 				<Providers attribute="class" defaultTheme="system" enableSystem>
+					<Header />
 					{children}
 				</Providers>
 			</body>
