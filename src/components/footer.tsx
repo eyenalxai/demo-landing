@@ -34,7 +34,8 @@ export const Footer = () => {
 	return (
 		<footer
 			className={cn(
-				"backdrop-blur-xl",
+				"w-full",
+				"bg-background",
 				"p-4",
 				"border-t",
 				"flex",
