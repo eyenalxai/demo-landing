@@ -1,3 +1,4 @@
+import { Logo } from "@/components/logo"
 import { cn } from "@/lib/utils"
 
 const Oof = () => (
@@ -24,9 +25,7 @@ export const Footer = () => (
 			"w-fit"
 		)}
 	>
-		<p className={cn("text-xl", "font-bold", ["col-span-2", "md:col-span-1"])}>
-			Lorem
-		</p>
+		<Logo />
 		<Oof />
 		<Oof />
 		<Oof />

@@ -1,9 +1,10 @@
+import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 export const Header = () => (
 	<header className={cn("flex", "justify-between", "items-center")}>
-		<p className={cn("text-xl", "font-bold")}>Lorem</p>
+		<Logo />
 		<div className={cn("flex", "gap-2")}>
 			<Button
 				variant={"link"}
