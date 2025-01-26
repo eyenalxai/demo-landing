@@ -96,6 +96,49 @@ export default function Page() {
 			<div className={cn("w-full", "mt-12", "flex", "justify-center")}>
 				<CarouselDemo />
 			</div>
+			<div
+				className={cn("flex", "flex-col", "gap-y-4", "mt-12", "items-center")}
+			>
+				<Card className={cn("max-w-2xl")}>
+					<CardHeader>
+						<CardTitle className={cn("text-3xl")}>
+							Vito statua tempore
+						</CardTitle>
+						<CardDescription>
+							Vitae auctor dolores atque angelus nobis quibusdam abscido dedico
+							solus abduco adulatio neque artificiose spero teneo vorago urbs
+							annus sumo.
+						</CardDescription>
+					</CardHeader>
+				</Card>
+				<Card className={cn("max-w-2xl")}>
+					<CardHeader>
+						<CardTitle className={cn("text-3xl")}>
+							Maxime depono casso illum
+						</CardTitle>
+						<CardDescription>
+							Calamitas non talus despecto sequi virtus cogo usque asper amet
+							qui deporto cognatus quaerat tricesimus templum sursum ager
+							accommodo a carmen repudiandae casus trado defessus arbor deduco
+							claro tenax cupressus.
+						</CardDescription>
+					</CardHeader>
+				</Card>
+				<Card className={cn("max-w-2xl")}>
+					<CardHeader>
+						<CardTitle className={cn("text-3xl")}>
+							Aro est suadeo benevolentia volo vigilo
+						</CardTitle>
+						<CardDescription>
+							Comitatus esse avaritia veritatis corporis laborum terminatio
+							audax defungo textus cribro decet volutabrum comes damnatio aranea
+							curso convoco dignissimos deripio cotidie canis sol aperio quaerat
+							copiose amicitia impedit aspernatur unus expedita cui celo demum
+							cuppedia quasi sordeo cupiditate brevis vinco.
+						</CardDescription>
+					</CardHeader>
+				</Card>
+			</div>
 		</div>
 	)
 }
