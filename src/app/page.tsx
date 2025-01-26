@@ -133,7 +133,7 @@ export default function Page() {
 				</div>
 			</div>
 			<div
-				className={cn("w-full", "flex", "justify-center", [
+				className={cn("w-full", "flex", "justify-center", "px-10", [
 					"animate-in",
 					"slide-in-from-left",
 					"fade-in",
