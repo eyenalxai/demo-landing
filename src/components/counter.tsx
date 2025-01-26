@@ -5,6 +5,7 @@ import {
 	AnimatePresence,
 	type MotionValue,
 	motion,
+	useAnimate,
 	useSpring,
 	useTransform
 } from "framer-motion"
@@ -20,9 +21,16 @@ export const Counter = ({ value }: { value: number }) => {
 		{ length: numDigits },
 		(_, i) => 10 ** (numDigits - i - 1)
 	)
+	const [scope, animate] = useAnimate()
+
+	const applyBlur = () =>
+		animate(scope.current, { filter: "blur(5px)" }, { duration: 0.1 })
+	const removeBlur = () =>
+		animate(scope.current, { filter: "blur(0px)" }, { duration: 0.1 })
 
 	return (
-		<div
+		<motion.div
+			ref={scope}
 			style={{ fontSize }}
 			className={cn("flex", "overflow-hidden", "tabular-nums")}
 		>
@@ -34,22 +42,55 @@ export const Counter = ({ value }: { value: number }) => {
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: 20 }}
 						transition={{ duration: 0.2 }}
+						onAnimationStart={applyBlur}
+						onAnimationComplete={removeBlur}
 					>
-						<Digit place={place} value={value} />
+						<Digit
+							place={place}
+							value={value}
+							onAnimate={applyBlur}
+							onRest={removeBlur}
+						/>
 					</motion.div>
 				))}
 			</AnimatePresence>
-		</div>
+		</motion.div>
 	)
 }
 
-const Digit = ({ place, value }: { place: number; value: number }) => {
+const Digit = ({
+	place,
+	value,
+	onAnimate,
+	onRest
+}: {
+	place: number
+	value: number
+	onAnimate: () => void
+	onRest: () => void
+}) => {
 	const valueRoundedToPlace = Math.floor(value / place)
 	const animatedValue = useSpring(valueRoundedToPlace, {
 		stiffness: 500,
 		mass: 1.0,
 		damping: 25
 	})
+
+	useEffect(() => {
+		let isAnimating = false
+		const unsubscribe = animatedValue.on("change", (latest: number) => {
+			const velocity = animatedValue.getVelocity()
+			if (Math.abs(velocity) > 0.1 && !isAnimating) {
+				isAnimating = true
+				onAnimate()
+			} else if (Math.abs(velocity) <= 0.1 && isAnimating) {
+				isAnimating = false
+				onRest()
+			}
+		})
+
+		return () => unsubscribe()
+	}, [animatedValue, onAnimate, onRest])
 
 	useEffect(() => {
 		animatedValue.set(valueRoundedToPlace)
