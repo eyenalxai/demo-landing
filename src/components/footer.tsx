@@ -1,7 +1,7 @@
 import { Logo } from "@/components/logo"
 import { cn } from "@/lib/utils"
 
-const Oof = () => (
+const FooterColumn = () => (
 	<div className={cn("flex", "flex-col", "justify-start", "gap-y-4")}>
 		<p>Lorem</p>
 		<div className={cn("flex", "flex-col", "gap-y-2")}>
@@ -26,10 +26,10 @@ export const Footer = () => (
 		)}
 	>
 		<Logo />
-		<Oof />
-		<Oof />
-		<Oof />
-		<Oof />
-		<Oof />
+		<FooterColumn />
+		<FooterColumn />
+		<FooterColumn />
+		<FooterColumn />
+		<FooterColumn />
 	</footer>
 )
