@@ -46,7 +46,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			>
 				<Providers attribute="class" defaultTheme="system" enableSystem>
 					<Header />
-					<main className={cn("my-8")}>{children}</main>
+					<main className={cn("my-8", "flex", "justify-center", "gap-y-4")}>
+						{children}
+					</main>
 					<Footer />
 				</Providers>
 			</body>

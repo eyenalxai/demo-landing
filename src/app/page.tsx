@@ -1,6 +1,27 @@
-import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import { capitalize, cn } from "@/lib/utils"
 import { faker } from "@faker-js/faker"
 
 export default function Page() {
-	return <div className={cn("capitalize")}>{faker.lorem.word()}</div>
+	return (
+		<div className={cn("flex", "flex-col", "items-center", "gap-y-4")}>
+			<p className={cn("text-muted-foreground")}>
+				{capitalize(`${faker.lorem.words(2)}`)}
+			</p>
+			<h1 className={cn("text-6xl", "font-bold", "max-w-lg", "text-center")}>
+				{capitalize(`${faker.lorem.words(6)}.`)}
+			</h1>
+			<h2
+				className={cn(
+					"text-xl",
+					"max-w-lg",
+					"text-center",
+					"text-muted-foreground"
+				)}
+			>
+				{capitalize(`${faker.lorem.words(20)}.`)}
+			</h2>
+			<Button>{capitalize(`${faker.lorem.words(2)}`)}</Button>
+		</div>
+	)
 }
