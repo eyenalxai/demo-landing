@@ -14,11 +14,17 @@ const padding = 15
 const height = fontSize + padding
 
 export const Counter = ({ value }: { value: number }) => {
+	const numDigits = Math.max(1, Math.floor(Math.log10(Math.abs(value))) + 1)
+	const digits = Array.from(
+		{ length: numDigits },
+		(_, i) => 10 ** (numDigits - i - 1)
+	)
+
 	return (
 		<div style={{ fontSize }} className={cn("flex", "overflow-hidden")}>
-			<Digit place={100} value={value} />
-			<Digit place={10} value={value} />
-			<Digit place={1} value={value} />
+			{digits.map((place) => (
+				<Digit key={place} place={place} value={value} />
+			))}
 		</div>
 	)
 }
