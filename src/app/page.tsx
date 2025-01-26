@@ -1,3 +1,6 @@
+import { cn } from "@/lib/utils"
+import { faker } from "@faker-js/faker"
+
 export default function Page() {
-	return <div>Lorem</div>
+	return <div className={cn("capitalize")}>{faker.lorem.word()}</div>
 }

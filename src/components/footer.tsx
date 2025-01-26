@@ -1,15 +1,26 @@
 import { Logo } from "@/components/logo"
 import { cn } from "@/lib/utils"
+import { faker } from "@faker-js/faker"
 
 const FooterColumn = () => (
 	<div className={cn("flex", "flex-col", "justify-start", "gap-y-4")}>
-		<p>Lorem</p>
+		<p className={cn("capitalize")}>{faker.lorem.word()}</p>
 		<div className={cn("flex", "flex-col", "gap-y-2")}>
-			<p className={cn("text-sm", "text-muted-foreground")}>Lorem</p>
-			<p className={cn("text-sm", "text-muted-foreground")}>Ipsum</p>
-			<p className={cn("text-sm", "text-muted-foreground")}>Dolor</p>
-			<p className={cn("text-sm", "text-muted-foreground")}>Sit</p>
-			<p className={cn("text-sm", "text-muted-foreground")}>Amet</p>
+			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
+				{faker.lorem.word()}
+			</p>
+			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
+				{faker.lorem.word()}
+			</p>
+			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
+				{faker.lorem.word()}
+			</p>
+			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
+				{faker.lorem.word()}
+			</p>
+			<p className={cn("capitalize", "text-sm", "text-muted-foreground")}>
+				{faker.lorem.word()}
+			</p>
 		</div>
 	</div>
 )
@@ -25,8 +36,9 @@ export const Footer = () => (
 			"w-fit"
 		)}
 	>
-		<Logo />
-		<FooterColumn />
+		<div className={cn("col-span-2", "md:col-span-1")}>
+			<Logo />
+		</div>
 		<FooterColumn />
 		<FooterColumn />
 		<FooterColumn />
