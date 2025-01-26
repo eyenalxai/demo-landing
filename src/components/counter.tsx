@@ -1,5 +1,6 @@
 "use client"
 
+import { cn } from "@/lib/utils"
 import {
 	type MotionValue,
 	motion,
@@ -14,7 +15,7 @@ const height = fontSize + padding
 
 export const Counter = ({ value }: { value: number }) => {
 	return (
-		<div style={{ fontSize }} className="flex overflow-hidden ">
+		<div style={{ fontSize }} className={cn("flex", "overflow-hidden")}>
 			<Digit place={100} value={value} />
 			<Digit place={10} value={value} />
 			<Digit place={1} value={value} />
@@ -35,7 +36,7 @@ const Digit = ({ place, value }: { place: number; value: number }) => {
 	}, [animatedValue, valueRoundedToPlace])
 
 	return (
-		<div style={{ height }} className="relative w-[1ch]">
+		<div style={{ height }} className={cn("relative", "w-[1ch]")}>
 			{[...Array(10).keys()].map((i) => (
 				<CounterNumber key={i} mv={animatedValue} number={i} />
 			))}
@@ -60,7 +61,13 @@ const CounterNumber = ({ mv, number }: { mv: MotionValue; number: number }) => {
 	return (
 		<motion.span
 			style={{ y }}
-			className="absolute inset-0 flex items-center justify-center"
+			className={cn(
+				"absolute",
+				"inset-0",
+				"flex",
+				"items-center",
+				"justify-center"
+			)}
 		>
 			{number}
 		</motion.span>
