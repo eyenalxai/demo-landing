@@ -209,7 +209,7 @@ export default function Page() {
 				</Card>
 			</div>
 			<div
-				className={cn("flex", "flex-row", "gap-x-4", [
+				className={cn("flex", ["flex-col", "md:flex-row"], "gap-4", [
 					"animate-in",
 					"slide-in-from-left",
 					"fade-in",
