@@ -39,13 +39,13 @@ const Digit = ({ place, value }: { place: number; value: number }) => {
 	return (
 		<div className={cn("relative", "w-[1ch]", "h-14")}>
 			{[...Array(10).keys()].map((i) => (
-				<Number key={i} mv={animatedValue} number={i} />
+				<CounterNumber key={i} mv={animatedValue} number={i} />
 			))}
 		</div>
 	)
 }
 
-const Number = ({ mv, number }: { mv: MotionValue; number: number }) => {
+const CounterNumber = ({ mv, number }: { mv: MotionValue; number: number }) => {
 	const y = useTransform(mv, (latest) => {
 		const placeValue = latest % 10
 		const offset = (10 + number - placeValue) % 10
