@@ -227,8 +227,9 @@ export default function Page() {
 				<h1 className={cn("text-6xl", "font-bold", "max-w-2xl", "text-center")}>
 					Thalassinus tandem communis tersus aperiam tego.
 				</h1>
-
-				<Button>{capitalize(`${faker.lorem.words(2)}`)}</Button>
+				<Button className={cn("mt-12")}>
+					{capitalize(`${faker.lorem.words(2)}`)}
+				</Button>
 			</div>
 		</div>
 	)
