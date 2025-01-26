@@ -43,8 +43,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					GeistMono.variable
 				)}
 			>
-				<div className="absolute inset-0 -z-10 size-full bg-background bg-[radial-gradient(hsl(var(--border))_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(hsl(var(--border))_0.3px,transparent_1px)]" />
 				<Providers attribute="class" defaultTheme="system" enableSystem>
+					<div
+						className={cn(
+							"absolute",
+							"inset-0",
+							"-z-10",
+							"size-full",
+							"bg-[linear-gradient(to_right,hsl(var(--border))_0.1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_0.1px,transparent_1px)]",
+							"bg-[size:6rem_4rem]"
+						)}
+					/>
 					<Header />
 					<main className={cn("my-12", "p-4", "flex", "justify-center")}>
 						{children}
