@@ -8,11 +8,15 @@ import {
 } from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
 import { Search, Snowflake, Sun } from "lucide-react"
+import Link from "next/link"
 
 export const HeaderLink = (props: { text: string }) => (
-	<Button variant={"link"} className={cn("text-muted-foreground", "p-0")}>
+	<Link
+		href={"/"}
+		className={cn("text-muted-foreground", "p-0", "text-sm", "hover:underline")}
+	>
 		{props.text}
-	</Button>
+	</Link>
 )
 
 export const Header = () => {
@@ -29,7 +33,14 @@ export const Header = () => {
 			className={cn("flex", "flex-row", "justify-between", "p-4", "border-b")}
 		>
 			<Logo />
-			<div className={cn(["hidden", "lg:flex"], "flex-row", "gap-x-4")}>
+			<div
+				className={cn(
+					["hidden", "lg:flex"],
+					"flex-row",
+					"items-center",
+					"gap-x-4"
+				)}
+			>
 				{headerLinks.map((link) => (
 					<HeaderLink key={link} text={link} />
 				))}

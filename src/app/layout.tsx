@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { Providers } from "@/components/providers"
 import { cn } from "@/lib/utils"
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				<Providers attribute="class" defaultTheme="system" enableSystem>
 					<Header />
 					<main>{children}</main>
+					<Footer />
 				</Providers>
 			</body>
 		</html>
