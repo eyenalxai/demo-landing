@@ -1,5 +1,6 @@
 "use client"
 
+import { Counter } from "@/components/counter"
 import {
 	Card,
 	CardContent,
@@ -35,9 +36,13 @@ export const CardSlider = () => {
 			</CardHeader>
 			<CardContent>
 				<div className={cn("flex", "flex-col", "gap-y-4")}>
-					<p className={cn("text-3xl", "font-bold")}>
-						{combinedValue.toFixed(0)}
-					</p>
+					<Counter
+						from={0}
+						to={combinedValue}
+						duration={0.3}
+						className={cn("text-3xl", "font-bold")}
+					/>
+
 					<div className={cn("flex", ["flex-row", "md:flex-col"], "gap-8")}>
 						<Slider
 							defaultValue={[coarseValue]}
