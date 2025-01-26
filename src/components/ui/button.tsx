@@ -20,8 +20,8 @@ const buttonVariants = cva(
 				outline: [
 					"bg-gradient-to-tr",
 					"from-background",
-					"to-primary/[3%]",
-					"bg-transparent",
+					"to-primary/[5%]",
+					"bg-background",
 					"border border-input shadow-sm hover:bg-accent hover:text-accent-foreground"
 				],
 				secondary:
