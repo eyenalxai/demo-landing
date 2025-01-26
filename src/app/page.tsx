@@ -1,5 +1,8 @@
+import { AreaChartDemo } from "@/components/chart/area-chart"
 import { CardSlider } from "@/components/card-slider"
 import { CarouselDemo } from "@/components/carousel-demo"
+import { LineChartDemo } from "@/components/chart/line-chart"
+import { PieChartDemo } from "@/components/chart/pie-chart"
 import { Button } from "@/components/ui/button"
 import {
 	Card,
@@ -138,6 +141,11 @@ export default function Page() {
 						</CardDescription>
 					</CardHeader>
 				</Card>
+			</div>
+			<div className={cn("flex", "flex-row", "gap-x-4", "mt-12")}>
+				<PieChartDemo />
+				<AreaChartDemo />
+				<LineChartDemo />
 			</div>
 		</div>
 	)
