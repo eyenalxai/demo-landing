@@ -127,7 +127,7 @@ export default function Page() {
 					Vivamus libero magna, non odio, eleifend!
 				</h2>
 			</div>
-			<div className={cn("max-w-screen-lg", "w-full")}>
+			<div className={cn(["max-w-80", "lg:max-w-screen-lg"], "w-full")}>
 				<Beam />
 			</div>
 			<h1

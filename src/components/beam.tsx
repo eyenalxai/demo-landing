@@ -81,7 +81,7 @@ export function Beam() {
 
 	return (
 		<div
-			className="relative flex w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-10 shadow-xl"
+			className="relative flex w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-6 shadow-xl"
 			ref={containerRef}
 		>
 			<GridPattern
