@@ -8,6 +8,7 @@ import {
 	CarouselNext,
 	CarouselPrevious
 } from "@/components/ui/carousel"
+import { cn } from "@/lib/utils"
 import Autoplay from "embla-carousel-autoplay"
 
 export const CarouselDemo = () => (
@@ -23,7 +24,7 @@ export const CarouselDemo = () => (
 		<CarouselContent>
 			{Array.from({ length: 5 }).map((_, index) => (
 				// biome-ignore lint/suspicious/noArrayIndexKey: It's a demo
-				<CarouselItem key={index}>
+				<CarouselItem key={index} className={cn("lg:basis-1/3")}>
 					<div className="p-1">
 						<Card>
 							<CardContent className="flex aspect-square items-center justify-center p-6">

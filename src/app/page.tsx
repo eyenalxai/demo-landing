@@ -2,6 +2,7 @@ import { Beam } from "@/components/beam"
 import { CardFlicker } from "@/components/card-flicker"
 import { CardRipple } from "@/components/card-ripple"
 import { CardSlider } from "@/components/card-slider"
+import { CarouselDemo } from "@/components/carousel-demo"
 import { Reviews } from "@/components/reviews"
 import { Button } from "@/components/ui/button"
 import { RainbowButton } from "@/components/ui/rainbow-button"
@@ -132,6 +133,9 @@ export default function Page() {
 			>
 				Atrox harum vicinus canonicus sui thermae argentum decens alii.
 			</h1>
+			<div className={cn(["w-1/2", "lg:w-5/6"], "max-w-screen-xl")}>
+				<CarouselDemo />
+			</div>
 			<p
 				className={cn("text-muted-foreground", "text-center", [
 					"max-w-sm",
