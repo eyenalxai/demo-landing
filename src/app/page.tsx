@@ -4,6 +4,7 @@ import { CardRipple } from "@/components/card-ripple"
 import { CardSlider } from "@/components/card-slider"
 import { Reviews } from "@/components/reviews"
 import { Button } from "@/components/ui/button"
+import { RainbowButton } from "@/components/ui/rainbow-button"
 import { cn } from "@/lib/utils"
 
 export default function Page() {
@@ -38,18 +39,21 @@ export default function Page() {
 				</span>{" "}
 				adulatio demergo supplanto nobis pauci, ligula arcu luctus felis.
 			</p>
-			<div className={cn("flex", "flex-col", "items-center", "gap-y-2")}>
+			<div className={cn("flex", "flex-col", "items-center", "gap-y-8")}>
 				<div
 					className={cn(
 						"w-full",
 						"flex",
 						"flex-row",
 						"justify-center",
-						"gap-x-2"
+						"items-center",
+						"gap-x-4"
 					)}
 				>
-					<Button>Carbo Odio</Button>
-					<Button variant={"outline"}>Neque Ex</Button>
+					<RainbowButton>Carbo Odio</RainbowButton>
+					<Button size={"lg"} variant={"outline"}>
+						Neque Ex
+					</Button>
 				</div>
 				<p className={cn("text-muted-foreground")}>
 					Dolore consequatur adsidue cornu.
@@ -179,17 +183,18 @@ export default function Page() {
 					arbitro aut.
 				</p>
 			</div>
-			<div className={cn("flex", "flex-col", "items-center", "gap-y-2")}>
+			<div className={cn("flex", "flex-col", "items-center", "gap-y-8")}>
 				<div
 					className={cn(
 						"w-full",
 						"flex",
 						"flex-row",
 						"justify-center",
-						"gap-x-2"
+						"items-center",
+						"gap-x-4"
 					)}
 				>
-					<Button>Decipio Accendo</Button>
+					<RainbowButton>Decipio Accendo</RainbowButton>
 					<Button variant={"outline"}>Denuncio Alii</Button>
 				</div>
 			</div>
