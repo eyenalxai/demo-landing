@@ -36,6 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
+				/* eslint-disable-next-line tailwindcss/no-contradicting-classname */
 				className={cn(
 					"font-sans",
 					"antialiased",
