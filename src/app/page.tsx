@@ -108,7 +108,16 @@ export default function Page() {
 						"overflow-hidden"
 					)}
 				>
-					<FlickeringGrid className={cn("scale-[115%]", "m-3", "-z-10")} />
+					<FlickeringGrid
+						className="relative inset-0 z-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
+						squareSize={4}
+						gridGap={6}
+						color="#60A5FA"
+						maxOpacity={0.5}
+						flickerChance={0.1}
+						height={800}
+						width={800}
+					/>
 				</Card>
 				<Card
 					className={cn(
