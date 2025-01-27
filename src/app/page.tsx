@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import {Button} from "@/components/ui/button"
+import {cn} from "@/lib/utils"
+import {CardSlider} from "@/components/card-slider";
 
 export default function Page() {
 	return (
@@ -80,6 +81,9 @@ export default function Page() {
 					</span>{" "}
 					abundans.
 				</p>
+			</div>
+			<div className={cn("flex", "flex-row", "gap-4", "flex-wrap")}>
+				<CardSlider />
 			</div>
 		</div>
 	)
