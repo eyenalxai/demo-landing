@@ -22,6 +22,7 @@ export const CarouselDemo = () => (
 	>
 		<CarouselContent>
 			{Array.from({ length: 5 }).map((_, index) => (
+				// biome-ignore lint/suspicious/noArrayIndexKey: It's a demo
 				<CarouselItem key={index}>
 					<div className="p-1">
 						<Card>
