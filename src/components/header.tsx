@@ -1,13 +1,9 @@
-import { Logo } from "@/components/logo"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import {
-	Popover,
-	PopoverContent,
-	PopoverTrigger
-} from "@/components/ui/popover"
-import { cn } from "@/lib/utils"
-import { Search, Snowflake, Sun } from "lucide-react"
+import {Logo} from "@/components/logo"
+import {Button} from "@/components/ui/button"
+import {Input} from "@/components/ui/input"
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover"
+import {cn} from "@/lib/utils"
+import {Search, Snowflake, Sun} from "lucide-react"
 import Link from "next/link"
 
 export const HeaderLink = (props: { text: string }) => (
@@ -43,18 +39,20 @@ export const Header = () => {
 				"border-b"
 			)}
 		>
-			<Logo />
-			<div
-				className={cn(
-					["hidden", "lg:flex"],
-					"flex-row",
-					"items-center",
-					"gap-x-4"
-				)}
-			>
-				{headerLinks.map((link) => (
-					<HeaderLink key={link} text={link} />
-				))}
+			<div className={cn("flex", "flex-row", "items-center", "gap-x-8")}>
+				<Logo />
+				<div
+					className={cn(
+						["hidden", "lg:flex"],
+						"flex-row",
+						"items-center",
+						"gap-x-4"
+					)}
+				>
+					{headerLinks.map((link) => (
+						<HeaderLink key={link} text={link} />
+					))}
+				</div>
 			</div>
 			<div className={cn("flex", "flex-row", "gap-x-4")}>
 				<Input
