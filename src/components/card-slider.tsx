@@ -20,7 +20,7 @@ export const CardSlider = () => {
 	const [valueTwo, setValueTwo] = useState(5)
 
 	return (
-		<Card className={cn("w-full", "h-full", "relative")}>
+		<Card className={cn("w-full", "h-full", "relative", "overflow-hidden")}>
 			<BorderBeam size={250} duration={12} delay={9} />
 			<CardHeader>
 				<CardTitle className={cn("text-2xl", "font-bold", "text-gradient")}>
