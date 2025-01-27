@@ -1,19 +1,19 @@
 "use client"
 
+import {
+	Anchor,
+	Compass,
+	Crown,
+	Fish,
+	Flower2,
+	Palette,
+	Rocket
+} from "lucide-react"
 import type React from "react"
 import { forwardRef, useRef } from "react"
 
 import { AnimatedBeam } from "@/components/ui/animated-beam"
 import { cn } from "@/lib/utils"
-import {
-	AudioWaveform,
-	GraduationCap,
-	KeyRound,
-	LayoutTemplate,
-	Microchip,
-	Pill,
-	Server
-} from "lucide-react"
 
 const Circle = forwardRef<
 	HTMLDivElement,
@@ -34,11 +34,7 @@ const Circle = forwardRef<
 
 Circle.displayName = "Circle"
 
-export function Beam({
-	className
-}: {
-	className?: string
-}) {
+export function Beam() {
 	const containerRef = useRef<HTMLDivElement>(null)
 	const div1Ref = useRef<HTMLDivElement>(null)
 	const div2Ref = useRef<HTMLDivElement>(null)
@@ -50,78 +46,79 @@ export function Beam({
 
 	return (
 		<div
-			className={cn(
-				"relative flex w-full items-center justify-center overflow-hidden p-10",
-				className
-			)}
+			className="relative flex w-full items-center justify-center overflow-hidden p-10"
 			ref={containerRef}
 		>
-			<div className="flex size-full max-w-lg flex-row items-stretch justify-between gap-10">
-				<div className="flex flex-col justify-center">
-					<Circle ref={div7Ref} className={cn("bg-background", "size-24")}>
-						<GraduationCap className={cn("size-14")} />
+			<div className="flex size-full max-h-[200px] max-w-lg flex-col items-stretch justify-between gap-10">
+				<div className="flex flex-row items-center justify-between">
+					<Circle ref={div1Ref} className={cn("bg-background")}>
+						<Anchor className="size-full" />
+					</Circle>
+					<Circle ref={div5Ref} className={cn("bg-background")}>
+						<Compass className="size-full" />
 					</Circle>
 				</div>
-				<div className="flex flex-col justify-center">
-					<Circle ref={div6Ref} className={cn("bg-background", "size-16")}>
-						<KeyRound />
+				<div className="flex flex-row items-center justify-between">
+					<Circle ref={div2Ref} className={cn("bg-background")}>
+						<Flower2 className="size-full" />
+					</Circle>
+					<Circle ref={div4Ref} className={cn("bg-background", "size-16")}>
+						<Crown className="size-full" />
+					</Circle>
+					<Circle ref={div6Ref} className={cn("bg-background")}>
+						<Palette className="size-full" />
 					</Circle>
 				</div>
-				<div className="flex flex-col justify-center gap-2">
-					<Circle ref={div1Ref} className={cn("bg-background", "size-12")}>
-						<LayoutTemplate />
+				<div className="flex flex-row items-center justify-between">
+					<Circle ref={div3Ref} className={cn("bg-background")}>
+						<Fish className="size-full" />
 					</Circle>
-					<Circle ref={div2Ref} className={cn("bg-background", "size-14")}>
-						<Microchip />
-					</Circle>
-					<Circle ref={div3Ref} className={cn("bg-background", "size-16")}>
-						<Pill />
-					</Circle>
-					<Circle ref={div4Ref} className={cn("bg-background", "size-18")}>
-						<Server />
-					</Circle>
-					<Circle ref={div5Ref} className={cn("bg-background", "size-20")}>
-						<AudioWaveform />
+					<Circle ref={div7Ref} className={cn("bg-background")}>
+						<Rocket className="size-full" />
 					</Circle>
 				</div>
 			</div>
 
-			{/* AnimatedBeams */}
 			<AnimatedBeam
 				containerRef={containerRef}
 				fromRef={div1Ref}
-				toRef={div6Ref}
-				duration={3}
+				toRef={div4Ref}
+				curvature={-75}
+				endYOffset={-10}
 			/>
 			<AnimatedBeam
 				containerRef={containerRef}
 				fromRef={div2Ref}
-				toRef={div6Ref}
-				duration={3}
+				toRef={div4Ref}
 			/>
 			<AnimatedBeam
 				containerRef={containerRef}
 				fromRef={div3Ref}
-				toRef={div6Ref}
-				duration={3}
-			/>
-			<AnimatedBeam
-				containerRef={containerRef}
-				fromRef={div4Ref}
-				toRef={div6Ref}
-				duration={3}
+				toRef={div4Ref}
+				curvature={75}
+				endYOffset={10}
 			/>
 			<AnimatedBeam
 				containerRef={containerRef}
 				fromRef={div5Ref}
-				toRef={div6Ref}
-				duration={3}
+				toRef={div4Ref}
+				curvature={-75}
+				endYOffset={-10}
+				reverse
 			/>
 			<AnimatedBeam
 				containerRef={containerRef}
 				fromRef={div6Ref}
-				toRef={div7Ref}
-				duration={3}
+				toRef={div4Ref}
+				reverse
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div7Ref}
+				toRef={div4Ref}
+				curvature={75}
+				endYOffset={10}
+				reverse
 			/>
 		</div>
 	)
