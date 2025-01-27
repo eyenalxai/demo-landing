@@ -1,15 +1,19 @@
-import {Logo} from "@/components/logo"
-import {Button} from "@/components/ui/button"
-import {Input} from "@/components/ui/input"
-import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover"
-import {cn} from "@/lib/utils"
-import {Search, Snowflake, Sun} from "lucide-react"
+import { Logo } from "@/components/logo"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import {
+	Popover,
+	PopoverContent,
+	PopoverTrigger
+} from "@/components/ui/popover"
+import { cn } from "@/lib/utils"
+import { Search, Snowflake, Sun } from "lucide-react"
 import Link from "next/link"
 
 export const HeaderLink = (props: { text: string }) => (
 	<Link
 		href={"/"}
-		className={cn("text-muted-foreground", "p-0", "text-sm", "hover:underline")}
+		className={cn("text-primary", "p-0", "text-sm", "hover:underline")}
 	>
 		{props.text}
 	</Link>
@@ -36,7 +40,8 @@ export const Header = () => {
 				"justify-between",
 				"items-center",
 				"p-4",
-				"border-b"
+				"border-b",
+				"z-50"
 			)}
 		>
 			<div className={cn("flex", "flex-row", "items-center", "gap-x-8")}>
