@@ -34,7 +34,7 @@ const Circle = forwardRef<
 
 Circle.displayName = "Circle"
 
-export function AnimatedBeamMultipleOutputDemo({
+export function Beam({
 	className
 }: {
 	className?: string
