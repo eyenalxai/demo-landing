@@ -95,6 +95,27 @@ export default function Page() {
 					<CardRipple />
 				</div>
 			</div>
+			<div
+				className={cn(
+					"flex",
+					"flex-row",
+					"flex-wrap",
+					"justify-center",
+					"items-end",
+					"gap-4"
+				)}
+			>
+				<h2
+					className={cn(
+						"text-4xl",
+						"font-bold",
+						"text-center",
+						"text-gradient"
+					)}
+				>
+					Vivamus libero magna, non odio, eleifend!
+				</h2>
+			</div>
 		</div>
 	)
 }
