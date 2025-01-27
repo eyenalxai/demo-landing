@@ -1,5 +1,6 @@
 "use client"
 
+import { BorderBeam } from "@/components/ui/border-beam"
 import {
 	Card,
 	CardContent,
@@ -19,7 +20,8 @@ export const CardSlider = () => {
 	const [valueTwo, setValueTwo] = useState(5)
 
 	return (
-		<Card className={cn("w-80", "h-fit")}>
+		<Card className={cn("w-80", "h-fit", "relative")}>
+			<BorderBeam size={250} duration={12} delay={9} />
 			<CardHeader>
 				<CardTitle className={cn("text-2xl", "font-bold", "text-gradient")}>
 					Quibusdam temporibus
