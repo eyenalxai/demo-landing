@@ -122,6 +122,31 @@ export default function Page() {
 				</h2>
 			</div>
 			<Beam />
+			<h1
+				className={cn("text-6xl", "font-bold", "text-center", "text-gradient")}
+			>
+				Atrox harum vicinus canonicus sui thermae argentum decens alii.
+			</h1>
+			<p
+				className={cn("text-muted-foreground", "text-center", [
+					"max-w-sm",
+					"lg:max-w-xl"
+				])}
+			>
+				Cohibeo tondeo{" "}
+				<span className={cn("font-semibold", "text-gradient")}>
+					veritas aurum excepturi textilis
+				</span>{" "}
+				magnam. Vulariter contra admoveo tendo hic. Eos causa{" "}
+				<span className={cn("font-semibold", "text-gradient")}>
+					cohaero adamo
+				</span>{" "}
+				velum congregatio debilito voluptatibus. Consequuntur{" "}
+				<span className={cn("font-semibold", "text-gradient")}>
+					careo minus tamquam
+				</span>{" "}
+				peior aurum animadverto.
+			</p>
 		</div>
 	)
 }
