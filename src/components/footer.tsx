@@ -40,7 +40,8 @@ export const Footer = () => {
 				"border-t",
 				"flex",
 				"flex-col",
-				"gap-y-4"
+				"gap-y-4",
+				"mb-12"
 			)}
 		>
 			<div
