@@ -1,9 +1,9 @@
+import { CardRipple } from "@/components/card-ripple"
 import { CardSlider } from "@/components/card-slider"
 import { CarouselDemo } from "@/components/carousel-demo"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { FlickeringGrid } from "@/components/ui/flickering-grid"
-import { Ripple } from "@/components/ui/ripple"
 import { cn } from "@/lib/utils"
 
 export default function Page() {
@@ -125,33 +125,9 @@ export default function Page() {
 						width={800}
 					/>
 				</Card>
-				<Card
-					className={cn(
-						"absolute",
-						"top-[38rem]",
-						"left-[21.25rem]",
-						"w-[36.5rem]",
-						"h-[16.75rem]",
-						"flex",
-						"justify-center",
-						"items-center"
-					)}
-				>
-					<p
-						className={cn(
-							"z-10",
-							"whitespace-pre-wrap",
-							"text-center",
-							"text-5xl",
-							"font-medium",
-							"tracking-tighter",
-							"text-gradient"
-						)}
-					>
-						Dolor
-					</p>
-					<Ripple />
-				</Card>
+				<div className={cn("absolute", "top-[38rem]", "left-[21.25rem]")}>
+					<CardRipple />
+				</div>
 			</div>
 		</div>
 	)
