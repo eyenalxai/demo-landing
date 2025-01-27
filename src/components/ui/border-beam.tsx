@@ -35,6 +35,7 @@ export const BorderBeam = ({
 					"--delay": `-${delay}s`
 				} as React.CSSProperties
 			}
+			/* eslint-disable-next-line tailwindcss/no-contradicting-classname */
 			className={cn(
 				"pointer-events-none absolute inset-0 rounded-[inherit] [border:calc(var(--border-width)*1px)_solid_transparent]",
 
