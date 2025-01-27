@@ -1,3 +1,4 @@
+import { AnimatedBeamMultipleOutputDemo } from "@/components/beam"
 import { CardFlicker } from "@/components/card-flicker"
 import { CardRipple } from "@/components/card-ripple"
 import { CardSlider } from "@/components/card-slider"
@@ -116,6 +117,7 @@ export default function Page() {
 					Vivamus libero magna, non odio, eleifend!
 				</h2>
 			</div>
+			<AnimatedBeamMultipleOutputDemo />
 		</div>
 	)
 }
