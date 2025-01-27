@@ -2,6 +2,7 @@ import { Beam } from "@/components/beam"
 import { CardFlicker } from "@/components/card-flicker"
 import { CardRipple } from "@/components/card-ripple"
 import { CardSlider } from "@/components/card-slider"
+import { Reviews } from "@/components/reviews"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -147,6 +148,7 @@ export default function Page() {
 				</span>{" "}
 				peior aurum animadverto.
 			</p>
+			<Reviews />
 		</div>
 	)
 }
