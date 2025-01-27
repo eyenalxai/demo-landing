@@ -3,6 +3,7 @@ import { CarouselDemo } from "@/components/carousel-demo"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { FlickeringGrid } from "@/components/ui/flickering-grid"
+import { Ripple } from "@/components/ui/ripple"
 import { cn } from "@/lib/utils"
 
 export default function Page() {
@@ -103,13 +104,18 @@ export default function Page() {
 						"absolute",
 						"top-[22.5rem]",
 						"w-80",
-						"h-[30rem]",
+						"h-[32.25rem]",
 						"p-0",
 						"overflow-hidden"
 					)}
 				>
 					<FlickeringGrid
-						className="relative inset-0 z-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
+						className={cn(
+							"relative",
+							"inset-0",
+							"z-0",
+							"[mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
+						)}
 						squareSize={4}
 						gridGap={6}
 						color="#60A5FA"
@@ -122,13 +128,29 @@ export default function Page() {
 				<Card
 					className={cn(
 						"absolute",
-						"top-[35.75rem]",
+						"top-[38rem]",
 						"left-[21.25rem]",
 						"w-[36.5rem]",
-						"h-[16.75rem]"
+						"h-[16.75rem]",
+						"flex",
+						"justify-center",
+						"items-center"
 					)}
 				>
-					asdas
+					<p
+						className={cn(
+							"z-10",
+							"whitespace-pre-wrap",
+							"text-center",
+							"text-5xl",
+							"font-medium",
+							"tracking-tighter",
+							"text-primary"
+						)}
+					>
+						Adsidue
+					</p>
+					<Ripple />
 				</Card>
 			</div>
 		</div>
