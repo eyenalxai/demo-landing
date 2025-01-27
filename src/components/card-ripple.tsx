@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils"
 export const CardRipple = () => (
 	<Card
 		className={cn(
+			"w-full",
+			"h-full",
 			"flex",
-			"w-[36.5rem]",
-			"h-[16.75rem]",
 			"relative",
 			"justify-center",
 			"items-center"

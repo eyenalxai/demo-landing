@@ -1,9 +1,8 @@
+import { CardFlicker } from "@/components/card-flicker"
 import { CardRipple } from "@/components/card-ripple"
 import { CardSlider } from "@/components/card-slider"
 import { CarouselDemo } from "@/components/carousel-demo"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { FlickeringGrid } from "@/components/ui/flickering-grid"
 import { cn } from "@/lib/utils"
 
 export default function Page() {
@@ -99,33 +98,20 @@ export default function Page() {
 				<div className={cn("px-[3.25rem]", "col-span-2")}>
 					<CarouselDemo />
 				</div>
-				<Card
+				<div
+					className={cn("absolute", "top-[22.5rem]", "w-80", "h-[32.25rem]")}
+				>
+					<CardFlicker />
+				</div>
+				<div
 					className={cn(
 						"absolute",
-						"top-[22.5rem]",
-						"w-80",
-						"h-[32.25rem]",
-						"p-0",
-						"overflow-hidden"
+						"top-[38rem]",
+						"left-[21.25rem]",
+						"w-[36.5rem]",
+						"h-[16.75rem]"
 					)}
 				>
-					<FlickeringGrid
-						className={cn(
-							"relative",
-							"inset-0",
-							"z-0",
-							"[mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
-						)}
-						squareSize={4}
-						gridGap={6}
-						color="#60A5FA"
-						maxOpacity={0.5}
-						flickerChance={0.1}
-						height={800}
-						width={800}
-					/>
-				</Card>
-				<div className={cn("absolute", "top-[38rem]", "left-[21.25rem]")}>
 					<CardRipple />
 				</div>
 			</div>
