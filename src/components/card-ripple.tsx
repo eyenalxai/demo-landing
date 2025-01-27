@@ -11,7 +11,8 @@ export const CardRipple = () => (
 			"relative",
 			"justify-center",
 			"items-center",
-			["bg-neutral-800", "dark:bg-neutral-200"]
+			["bg-neutral-800", "dark:bg-neutral-200"],
+			"overflow-hidden"
 		)}
 	>
 		<p
