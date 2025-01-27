@@ -82,11 +82,18 @@ export default function Page() {
 					abundans.
 				</p>
 			</div>
-			<div className={cn("grid", ["grid-cols-1", "lg:grid-cols-2"], "gap-4")}>
-				<div className={cn("w-80", "h-[21rem]")}>
+			<div
+				className={cn(
+					"grid",
+					["grid-cols-1", "lg:grid-cols-2"],
+					"gap-4",
+					"max-w-screen-lg"
+				)}
+			>
+				<div className={cn("w-full", "h-[21rem]")}>
 					<CardSlider />
 				</div>
-				<div className={cn("w-80", "h-[21rem]", ["hidden", "lg:block"])}>
+				<div className={cn("w-full", "h-[21rem]", ["hidden", "lg:block"])}>
 					<CardFlicker />
 				</div>
 				<div className={cn("lg:col-span-2", "h-[21rem]")}>
