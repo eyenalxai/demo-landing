@@ -151,6 +151,54 @@ export default function Page() {
 			<div className={cn("max-w-3xl")}>
 				<Reviews />
 			</div>
+			<div
+				className={cn(
+					"flex",
+					"flex-row",
+					"flex-wrap",
+					"justify-center",
+					"items-end",
+					"gap-4"
+				)}
+			>
+				<h2
+					className={cn(
+						"text-4xl",
+						"font-bold",
+						"text-center",
+						"text-gradient"
+					)}
+				>
+					Aiunt deripio?
+				</h2>
+				<p className={cn("text-muted-foreground", "text-center", "text-2xl")}>
+					Vesica dicta{" "}
+					<span className={cn("font-semibold", "text-gradient")}>
+						tantum territo
+					</span>{" "}
+					arbitro aut.
+				</p>
+				<p
+					className={cn("text-muted-foreground", "text-center", [
+						"max-w-sm",
+						"lg:max-w-xl"
+					])}
+				>
+					Crapula{" "}
+					<span className={cn("font-semibold", "text-gradient")}>
+						statim alias
+					</span>{" "}
+					ustilo. Antiquus{" "}
+					<span className={cn("font-semibold", "text-gradient")}>
+						cibus patria utilis
+					</span>{" "}
+					charisma bellum ait suggero. Amo{" "}
+					<span className={cn("font-semibold", "text-gradient")}>
+						laborum tertius
+					</span>{" "}
+					adicio.
+				</p>
+			</div>
 		</div>
 	)
 }
