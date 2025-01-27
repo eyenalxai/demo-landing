@@ -17,18 +17,15 @@ export default function Page() {
 			)}
 		>
 			<h1
-				className={cn(
-					"text-6xl",
-					"font-bold",
-					"text-center",
-					"max-w-[30rem]",
-					"text-gradient"
-				)}
+				className={cn("text-6xl", "font-bold", "text-center", "text-gradient")}
 			>
 				Ultra creo acsi deleo magni atrocitas.
 			</h1>
 			<p
-				className={cn("max-w-[30rem]", "text-muted-foreground", "text-center")}
+				className={cn("text-muted-foreground", "text-center", [
+					"max-w-sm",
+					"lg:max-w-xl"
+				])}
 			>
 				Amor capillus harum capto est{" "}
 				<span className={cn("font-semibold", "text-gradient")}>
