@@ -131,7 +131,13 @@ export default function Page() {
 				<Beam />
 			</div>
 			<h1
-				className={cn("text-6xl", "font-bold", "text-center", "text-gradient")}
+				className={cn(
+					"text-6xl",
+					"font-bold",
+					"text-center",
+					"text-gradient",
+					"max-w-screen-lg"
+				)}
 			>
 				Atrox harum vicinus canonicus sui thermae argentum decens alii.
 			</h1>
