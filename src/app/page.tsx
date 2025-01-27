@@ -145,10 +145,10 @@ export default function Page() {
 							"text-5xl",
 							"font-medium",
 							"tracking-tighter",
-							"text-primary"
+							"text-gradient"
 						)}
 					>
-						Adsidue
+						Dolor
 					</p>
 					<Ripple />
 				</Card>
