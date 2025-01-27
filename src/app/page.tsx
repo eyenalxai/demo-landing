@@ -141,7 +141,9 @@ export default function Page() {
 			>
 				Atrox harum vicinus canonicus sui thermae argentum decens alii.
 			</h1>
-			<div className={cn(["w-1/2", "lg:w-5/6"], "max-w-screen-xl")}>
+			<div
+				className={cn(["w-2/3", "lg:w-5/6"], ["max-w-[23rem]", "lg:max-w-4xl"])}
+			>
 				<CarouselDemo />
 			</div>
 			<p
