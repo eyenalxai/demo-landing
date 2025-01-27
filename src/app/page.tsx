@@ -1,6 +1,7 @@
-import {Button} from "@/components/ui/button"
-import {cn} from "@/lib/utils"
-import {CardSlider} from "@/components/card-slider";
+import { CardSlider } from "@/components/card-slider"
+import { CarouselDemo } from "@/components/carousel-demo"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 export default function Page() {
 	return (
@@ -83,7 +84,12 @@ export default function Page() {
 				</p>
 			</div>
 			<div className={cn("flex", "flex-row", "gap-4", "flex-wrap")}>
-				<CardSlider />
+				<div>
+					<CardSlider />
+				</div>
+				<div className={cn("px-[3.25rem]")}>
+					<CarouselDemo />
+				</div>
 			</div>
 		</div>
 	)
