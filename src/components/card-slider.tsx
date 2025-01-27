@@ -21,7 +21,7 @@ export const CardSlider = () => {
 	return (
 		<Card className={cn("w-80")}>
 			<CardHeader>
-				<CardTitle className={cn("text-2xl", "font-bold")}>
+				<CardTitle className={cn("text-2xl", "font-bold", "text-gradient")}>
 					Quibusdam temporibus
 				</CardTitle>
 				<CardDescription>
@@ -98,7 +98,7 @@ export const CardSlider = () => {
 					<Contrast className={cn("w-4", "h-4")} />
 					Defluo spargo:
 				</div>
-				<div className={cn("text-2xl", "font-bold")}>
+				<div className={cn("text-2xl", "font-bold", "text-gradient")}>
 					{(valueOne * valueTwo).toLocaleString()}
 				</div>
 			</CardFooter>
