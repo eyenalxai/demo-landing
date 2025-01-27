@@ -108,7 +108,7 @@ export default function Page() {
 						"absolute",
 						"top-[38rem]",
 						"left-[21.25rem]",
-						"w-[36.5rem]",
+						"w-[37.5rem]",
 						"h-[16.75rem]"
 					)}
 				>
