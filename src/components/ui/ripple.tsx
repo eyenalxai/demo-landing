@@ -1,6 +1,8 @@
-import React, { type ComponentPropsWithoutRef, type CSSProperties } from "react"
+"use client"
 
 import { cn } from "@/lib/utils"
+import { useTheme } from "next-themes"
+import React, { type ComponentPropsWithoutRef, type CSSProperties } from "react"
 
 interface RippleProps extends ComponentPropsWithoutRef<"div"> {
 	mainCircleSize?: number
@@ -15,6 +17,8 @@ export const Ripple = React.memo(function Ripple({
 	className,
 	...props
 }: RippleProps) {
+	const { resolvedTheme } = useTheme()
+
 	return (
 		<div
 			className={cn(
@@ -28,13 +32,14 @@ export const Ripple = React.memo(function Ripple({
 				const opacity = mainCircleOpacity - i * 0.03
 				const animationDelay = `${i * 0.06}s`
 				const borderStyle = i === numCircles - 1 ? "dashed" : "solid"
-				const borderOpacity = 5 + i * 5
 
 				return (
 					<div
 						// biome-ignore lint/suspicious/noArrayIndexKey: It's a demo
 						key={i}
-						className={`[--i: absolute animate-ripple rounded-full border bg-foreground/25 shadow-xl${i}]`}
+						className={
+							"absolute animate-ripple rounded-full border bg-neutral-500/50 shadow-xl"
+						}
 						style={
 							{
 								width: `${size}px`,
@@ -43,7 +48,7 @@ export const Ripple = React.memo(function Ripple({
 								animationDelay,
 								borderStyle,
 								borderWidth: "1px",
-								borderColor: `hsl(var(--foreground), ${borderOpacity / 100})`,
+								borderColor: resolvedTheme === "light" ? "#fff" : "#000",
 								top: "50%",
 								left: "50%",
 								transform: "translate(-50%, -50%) scale(1)"

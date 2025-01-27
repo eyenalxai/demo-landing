@@ -10,7 +10,8 @@ export const CardRipple = () => (
 			"flex",
 			"relative",
 			"justify-center",
-			"items-center"
+			"items-center",
+			["bg-neutral-800", "dark:bg-neutral-200"]
 		)}
 	>
 		<p
@@ -21,7 +22,7 @@ export const CardRipple = () => (
 				"text-5xl",
 				"font-medium",
 				"tracking-tighter",
-				"text-gradient"
+				["text-neutral-100", "dark:text-neutral-800"]
 			)}
 		>
 			Dolor
