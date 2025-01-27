@@ -40,21 +40,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					"font-sans",
 					"antialiased",
 					GeistSans.variable,
-					GeistMono.variable
+					GeistMono.variable,
+					"bg-[linear-gradient(to_right,hsl(var(--border))_0.1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_0.1px,transparent_1px)]",
+					"bg-[size:6rem_3.708rem]"
 				)}
 			>
 				<Providers attribute="class" defaultTheme="system" enableSystem>
 					<Header />
-					<main
-						className={cn(
-							"my-24",
-							"p-4",
-							"flex",
-							"justify-center",
-							"bg-[linear-gradient(to_right,hsl(var(--border))_0.1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_0.1px,transparent_1px)]",
-							"bg-[size:6rem_3.708rem]"
-						)}
-					>
+					<main className={cn("my-24", "p-4", "flex", "justify-center")}>
 						{children}
 					</main>
 					<Footer />
