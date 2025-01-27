@@ -127,7 +127,9 @@ export default function Page() {
 					Vivamus libero magna, non odio, eleifend!
 				</h2>
 			</div>
-			<Beam />
+			<div className={cn("max-w-screen-lg", "w-full")}>
+				<Beam />
+			</div>
 			<h1
 				className={cn("text-6xl", "font-bold", "text-center", "text-gradient")}
 			>

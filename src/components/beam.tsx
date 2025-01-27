@@ -30,6 +30,7 @@ import type React from "react"
 import { forwardRef, useRef } from "react"
 
 import { AnimatedBeam } from "@/components/ui/animated-beam"
+import { GridPattern } from "@/components/ui/grid-pattern"
 import { cn } from "@/lib/utils"
 
 const Circle = forwardRef<
@@ -80,9 +81,19 @@ export function Beam() {
 
 	return (
 		<div
-			className="relative flex w-full items-center justify-center overflow-hidden p-10"
+			className="relative flex w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-10 shadow-xl"
 			ref={containerRef}
 		>
+			<GridPattern
+				width={30}
+				height={30}
+				x={-1}
+				y={-1}
+				strokeDasharray={"4 2"}
+				className={cn(
+					"[mask-image:radial-gradient(900px_circle_at_center,white,transparent)]"
+				)}
+			/>
 			<div className="flex size-full max-h-[400px] max-w-3xl flex-col items-stretch justify-between gap-8">
 				<div className="flex flex-row items-center justify-between">
 					<Circle ref={div1Ref} className={cn("bg-background")}>
