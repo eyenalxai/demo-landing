@@ -2,17 +2,29 @@
 
 import {
 	Anchor,
+	Bird,
+	Bug,
+	Camera,
 	Cloud,
 	Compass,
 	Crown,
+	Diamond,
 	Fish,
+	Flame,
 	Flower2,
+	Globe,
 	Heart,
+	Leaf,
 	Moon,
+	Music,
 	Palette,
 	Rocket,
+	Sparkles,
 	Star,
-	Sun
+	Sun,
+	Trees,
+	Umbrella,
+	Wind
 } from "lucide-react"
 import type React from "react"
 import { forwardRef, useRef } from "react"
@@ -53,13 +65,25 @@ export function Beam() {
 	const div10Ref = useRef<HTMLDivElement>(null)
 	const div11Ref = useRef<HTMLDivElement>(null)
 	const div12Ref = useRef<HTMLDivElement>(null)
+	const div13Ref = useRef<HTMLDivElement>(null)
+	const div14Ref = useRef<HTMLDivElement>(null)
+	const div15Ref = useRef<HTMLDivElement>(null)
+	const div16Ref = useRef<HTMLDivElement>(null)
+	const div17Ref = useRef<HTMLDivElement>(null)
+	const div18Ref = useRef<HTMLDivElement>(null)
+	const div19Ref = useRef<HTMLDivElement>(null)
+	const div20Ref = useRef<HTMLDivElement>(null)
+	const div21Ref = useRef<HTMLDivElement>(null)
+	const div22Ref = useRef<HTMLDivElement>(null)
+	const div23Ref = useRef<HTMLDivElement>(null)
+	const div24Ref = useRef<HTMLDivElement>(null)
 
 	return (
 		<div
 			className="relative flex w-full items-center justify-center overflow-hidden p-10"
 			ref={containerRef}
 		>
-			<div className="flex size-full max-h-[300px] max-w-2xl flex-col items-stretch justify-between gap-10">
+			<div className="flex size-full max-h-[400px] max-w-3xl flex-col items-stretch justify-between gap-8">
 				<div className="flex flex-row items-center justify-between">
 					<Circle ref={div1Ref} className={cn("bg-background")}>
 						<Anchor className="size-full" />
@@ -67,25 +91,65 @@ export function Beam() {
 					<Circle ref={div8Ref} className={cn("bg-background")}>
 						<Star className="size-full" />
 					</Circle>
+					<Circle ref={div13Ref} className={cn("bg-background")}>
+						<Bird className="size-full" />
+					</Circle>
+					<Circle ref={div14Ref} className={cn("bg-background")}>
+						<Bug className="size-full" />
+					</Circle>
 					<Circle ref={div5Ref} className={cn("bg-background")}>
 						<Compass className="size-full" />
 					</Circle>
 				</div>
 				<div className="flex flex-row items-center justify-between">
+					<Circle ref={div15Ref} className={cn("bg-background")}>
+						<Camera className="size-full" />
+					</Circle>
 					<Circle ref={div2Ref} className={cn("bg-background")}>
 						<Flower2 className="size-full" />
 					</Circle>
 					<Circle ref={div9Ref} className={cn("bg-background")}>
 						<Heart className="size-full" />
 					</Circle>
+					<Circle ref={div16Ref} className={cn("bg-background")}>
+						<Diamond className="size-full" />
+					</Circle>
+					<Circle ref={div17Ref} className={cn("bg-background")}>
+						<Flame className="size-full" />
+					</Circle>
+				</div>
+				<div className="flex flex-row items-center justify-between">
+					<Circle ref={div18Ref} className={cn("bg-background")}>
+						<Globe className="size-full" />
+					</Circle>
+					<Circle ref={div19Ref} className={cn("bg-background")}>
+						<Leaf className="size-full" />
+					</Circle>
 					<Circle ref={div4Ref} className={cn("bg-background", "size-16")}>
 						<Crown className="size-full" />
 					</Circle>
+					<Circle ref={div20Ref} className={cn("bg-background")}>
+						<Music className="size-full" />
+					</Circle>
+					<Circle ref={div21Ref} className={cn("bg-background")}>
+						<Sparkles className="size-full" />
+					</Circle>
+				</div>
+				<div className="flex flex-row items-center justify-between">
 					<Circle ref={div10Ref} className={cn("bg-background")}>
 						<Sun className="size-full" />
 					</Circle>
+					<Circle ref={div22Ref} className={cn("bg-background")}>
+						<Trees className="size-full" />
+					</Circle>
 					<Circle ref={div6Ref} className={cn("bg-background")}>
 						<Palette className="size-full" />
+					</Circle>
+					<Circle ref={div23Ref} className={cn("bg-background")}>
+						<Umbrella className="size-full" />
+					</Circle>
+					<Circle ref={div24Ref} className={cn("bg-background")}>
+						<Wind className="size-full" />
 					</Circle>
 				</div>
 				<div className="flex flex-row items-center justify-between">
@@ -198,6 +262,133 @@ export function Beam() {
 				fromRef={div7Ref}
 				toRef={div8Ref}
 				curvature={40}
+			/>
+
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div13Ref}
+				toRef={div14Ref}
+				curvature={25}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div14Ref}
+				toRef={div15Ref}
+				curvature={-35}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div15Ref}
+				toRef={div16Ref}
+				curvature={45}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div16Ref}
+				toRef={div17Ref}
+				curvature={-40}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div17Ref}
+				toRef={div18Ref}
+				curvature={55}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div18Ref}
+				toRef={div19Ref}
+				curvature={-30}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div19Ref}
+				toRef={div20Ref}
+				curvature={35}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div20Ref}
+				toRef={div21Ref}
+				curvature={-45}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div21Ref}
+				toRef={div22Ref}
+				curvature={50}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div22Ref}
+				toRef={div23Ref}
+				curvature={-35}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div23Ref}
+				toRef={div24Ref}
+				curvature={40}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div13Ref}
+				toRef={div24Ref}
+				curvature={65}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div14Ref}
+				toRef={div19Ref}
+				curvature={-50}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div15Ref}
+				toRef={div20Ref}
+				curvature={45}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div16Ref}
+				toRef={div21Ref}
+				curvature={-40}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div17Ref}
+				toRef={div22Ref}
+				curvature={35}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div18Ref}
+				toRef={div23Ref}
+				curvature={-45}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div13Ref}
+				toRef={div4Ref}
+				curvature={55}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div16Ref}
+				toRef={div4Ref}
+				curvature={-60}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div19Ref}
+				toRef={div4Ref}
+				curvature={40}
+			/>
+			<AnimatedBeam
+				containerRef={containerRef}
+				fromRef={div21Ref}
+				toRef={div4Ref}
+				curvature={-35}
 			/>
 		</div>
 	)
