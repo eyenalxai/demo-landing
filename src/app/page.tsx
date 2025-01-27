@@ -148,7 +148,9 @@ export default function Page() {
 				</span>{" "}
 				peior aurum animadverto.
 			</p>
-			<Reviews />
+			<div className={cn("max-w-3xl")}>
+				<Reviews />
+			</div>
 		</div>
 	)
 }
