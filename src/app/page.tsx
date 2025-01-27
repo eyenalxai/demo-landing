@@ -178,27 +178,41 @@ export default function Page() {
 					</span>{" "}
 					arbitro aut.
 				</p>
-				<p
-					className={cn("text-muted-foreground", "text-center", [
-						"max-w-sm",
-						"lg:max-w-xl"
-					])}
-				>
-					Crapula{" "}
-					<span className={cn("font-semibold", "text-gradient")}>
-						statim alias
-					</span>{" "}
-					ustilo. Antiquus{" "}
-					<span className={cn("font-semibold", "text-gradient")}>
-						cibus patria utilis
-					</span>{" "}
-					charisma bellum ait suggero. Amo{" "}
-					<span className={cn("font-semibold", "text-gradient")}>
-						laborum tertius
-					</span>{" "}
-					adicio.
-				</p>
 			</div>
+			<div className={cn("flex", "flex-col", "items-center", "gap-y-2")}>
+				<div
+					className={cn(
+						"w-full",
+						"flex",
+						"flex-row",
+						"justify-center",
+						"gap-x-2"
+					)}
+				>
+					<Button>Decipio Accendo</Button>
+					<Button variant={"outline"}>Denuncio Alii</Button>
+				</div>
+			</div>
+			<p
+				className={cn("text-muted-foreground", "text-center", [
+					"max-w-sm",
+					"lg:max-w-xl"
+				])}
+			>
+				Crapula{" "}
+				<span className={cn("font-semibold", "text-gradient")}>
+					statim alias
+				</span>{" "}
+				ustilo. Antiquus{" "}
+				<span className={cn("font-semibold", "text-gradient")}>
+					cibus patria utilis
+				</span>{" "}
+				charisma bellum ait suggero. Amo{" "}
+				<span className={cn("font-semibold", "text-gradient")}>
+					laborum tertius
+				</span>{" "}
+				adicio.
+			</p>
 		</div>
 	)
 }
