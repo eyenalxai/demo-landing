@@ -1,6 +1,8 @@
 import { CardSlider } from "@/components/card-slider"
 import { CarouselDemo } from "@/components/carousel-demo"
 import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { FlickeringGrid } from "@/components/ui/flickering-grid"
 import { cn } from "@/lib/utils"
 
 export default function Page() {
@@ -83,13 +85,42 @@ export default function Page() {
 					abundans.
 				</p>
 			</div>
-			<div className={cn("flex", "flex-row", "gap-4", "flex-wrap")}>
-				<div>
-					<CardSlider />
-				</div>
-				<div className={cn("px-[3.25rem]")}>
+			<div
+				className={cn(
+					"relative",
+					"gap-4",
+					"grid",
+					"grid-cols-3",
+					"grid-flow-dense"
+				)}
+			>
+				<CardSlider />
+				<div className={cn("px-[3.25rem]", "col-span-2")}>
 					<CarouselDemo />
 				</div>
+				<Card
+					className={cn(
+						"absolute",
+						"top-[22.5rem]",
+						"w-80",
+						"h-[30rem]",
+						"p-0",
+						"overflow-hidden"
+					)}
+				>
+					<FlickeringGrid className={cn("scale-[115%]", "m-3", "-z-10")} />
+				</Card>
+				<Card
+					className={cn(
+						"absolute",
+						"top-[35.75rem]",
+						"left-[21.25rem]",
+						"w-[36.5rem]",
+						"h-[16.75rem]"
+					)}
+				>
+					asdas
+				</Card>
 			</div>
 		</div>
 	)
